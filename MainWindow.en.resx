@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>782, 26</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>782, 500</value>
+  </data>
+  <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>782, 500</value>
+  </data>
   <data name="FileLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 20</value>
   </data>
@@ -129,44 +138,45 @@
     <value>Fill</value>
   </data>
   <data name="scaleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 58</value>
+    <value>66, 58</value>
   </data>
   <data name="scaleBox.Text" xml:space="preserve">
     <value>Scale</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Xlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Xlabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Xlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 64</value>
-  </data>
-  <data name="Xlabel.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
   <data name="Xlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="Ylabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Workspace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 428</value>
   </data>
-  <data name="Ylabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="PictureBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHjSURBVDhPhZNLaxNhFIaryy6iLVoULPgHXEWKK5eu
+        ChUky4ibipW2i1bjBSUEhK6FBAkRFYS6EHcu7MqC3fRGhbYiaTUoyUwnySSZW2YmF1/P+doM02RCBx74
+        Zua8D+cc+AYACOi5RISJsRO4TJz2cj5B2HGcWrPZbLdaLQRB/5FMJl/6JX7BGIdNTYP24jGMr0uwLAsa
+        vVerVSiKIiSyLCOVSnmSTvgUC7jANnRo8XlY3zdg2zYMw0CtVkOxWBSCer0O0zSRTqcPJd0C13VRiU1B
+        X3wjBBzQdR2lUunYOAxnegQ0BirxBzA+LYozz90ZpVwui04kSeovYIr3oijHpsXZL+FOeB+qqvYXOL/3
+        Id2+hYP7d2D/2Dkm4XF4JyzqK5AfzkB9/Qr2rz0UpkiynxXFjUZD7IclTKDAVWTkIuNwCnnUsz+Rn72L
+        7LUryN28gb+TURSezEH9+EF0EyjIP3+EQuIpql8+o/T+LbRvyzB3tyEtJPBnehL5ZzEo7zK9gpWLw0Pp
+        c6H4XmQCbuVwQQzPznD7jK0cwKUd8NkTbF4Yuk4sLI+c3dLXV71wt6QbT7B2PpQhlpJnBuP08Z8/fAJt
+        b4SjPVylLVv8o6swiDbVGpQJ+wWjLCGCrnAQdPUHRv8DJDmz4DqPjM0AAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="Ylabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 64</value>
-  </data>
-  <data name="Ylabel.Text" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="Ylabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="previousFileButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="previousFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEXSURBVDhPYxgFqKD+Sihb8fH03VAu6aDkePrtgsOp36Fc
+        0kDxsfSL3Wcb/refrPmfsSP2f9LGiP8xK4P/hy30/e8/0/2/50TH/04d1v+tG0z/m1bo/9cv0PoP1QrU
+        fDzjZNeZ+v+rbyz6v/zavP+Lr8z6P//StP+zzk/+P/VM3/8Jpzr/dx9v/d9+tPF/06Ha/3UHKv5rZqoi
+        DCg8nHqk7UT1/6VX5/xfeHnG/7kXpvyfcW7C/8mnu//3nWz/33ms6X/L4br/DQer/tfsK/tfsbfov0qy
+        IsIAEEjfHnO+el/h/2agopRV0TidDbIZpFkhThbVABCIXhl8M3Sh73ffWR4WUCHSQOiqUDa/GW47oNxR
+        QBRgYAAAThyX9yKzNUcAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="previousFileButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -177,20 +187,60 @@
   <data name="nextFileButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="nextFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEVSURBVDhPYxgFpAH/GW67Q+tD2aBc0oHnBMfvTh3Wt6Fc
+        BCg5nvEfhAsPp/7P3Zf4P2NH7P+kjRH/Y1YG/w9b6Pvff6b7f8+Jjv+TFkf9j5kb+t+kXP8iVCsEgDSv
+        u7X0/+obi/4vvzbv/+Irs/7PvzTt/6zzk/9PPdP3f8Kpzv/dx1v/tx9t/N90qPZ/wESv/xqZKieh2hkY
+        QDavvL7g/9Krc/4vvDzj/9wLU/7PODfh/+TT3f/7Trb/7zzW9L/lcN3/hoNV/2v2lf336nH9r5KkcASq
+        nYEBn7OBfv5v3WD637XD/n/cwsj/nt0u/5WTFM9DtRIPdAs1LDQzVb8Dbb4JFSIdqCQp7tAK1SI/Gocl
+        YGAAAOZBlQQ7LqVeAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="nextFileButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="nextFileButton.ToolTipText" xml:space="preserve">
     <value>Open the next file in the directory.</value>
   </data>
-  <data name="pdfGeneratingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
+  <data name="pdfGeneratingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHqSURBVDhPjZPNSxthEIdtj1Kigi0eavEf6EkJPfXYk9CC
+        eLT0YtGiPfQjbaUShIJnSUMExRYK9lC8eainCp78ooV+ULLbSkuy6ybZJPuV3U2iP2decYnJhnbggfdl
+        Zx5mZnc7GuIqMUhE/8EAcZFoicFKpVKWJOmoXq8jDM/zkEgkFig3VBLlYtswYLx6DuvTBhzHgUH3UqkE
+        TdOERFVVJJPJFskFIsoJrmXCiD+G82UPruvCsiyUy2XkcjkhoC5h2zZSqdSZREQg8H0fxdgkzNUVIeAC
+        0zSRz+fPjcNwjaimCAS1Wg3F+BNYa6vizHOfjVIoFEQniqK0FzC5iTEUYlPi3CjhTngfuq63F3i/ZSh3
+        R3D44B7cH9/OSXgc3gmL2grUp9PQl1Nwf0nITpJETovkarUq9sMSJlTgayoORofhZTOopH8i8/A+0jeu
+        4+DOLfwdH0P2xSPoH96LbkIFmdlnyM7NoPRxHfl3b2BsbcL+/hXK/Bz+TI0j8zIG7e1Sq2DrWlfPYm8k
+        Lo3ehl88XRDDszPcPuNqh/BpB3wOBPt93Tf3+7rmN690fzZ3t4PiZkkzgWDncmRpp/fSxutIZ1yW5eNm
+        QTso90gIGmKIXo/DD8IKGuEc+pwtquG/N4h+Yohg6/9AxR39JzX1b6g+8J5WAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="pdfGeneratingButton.ToolTipText" xml:space="preserve">
     <value>Make the PDF file.</value>
   </data>
+  <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIQSURBVDhP3Y/LaxNBHMfn4L03/wQP1tRHbFQ8eBFEELyI
+        HtSTCFoCSoSCImgPaSNCpDR6EB+IpYKtFR8I4iF4kMbWdrfN2myTtDZtDd1gs+/34+tsu0rjwavgMB9m
+        5vD5fn9D/pM1+zbO1l4fc5b+oPJu/3z1RcfW+efxthY+xNvy+UNbIp2QwtOEFQQ+gIDukI27azawku+y
+        l8dOW7+oT14ya2OpGv9qz8lIJ4R72SkFnglrJQt9oR/64mMYtREErkizNASeSpE33m4TgiDY/GiCi3RC
+        ykO7Fd+RqZyDVh2A8rUHa+NdaEwkIRbTEGduQmSvocl0U1J0MgHl0b1qpNOA4U7HNVYhcjk0pzIQPl6B
+        IXymrUrUHp7S7wnC7zHDO81IDyfY56z/37coBuDp66Jn8LDqOZjLaRjfuqFXLkDjz8DTSmAGNwfkEnbg
+        GfCUAlzxPZwfI7BXH1DxNozF6zCqSehzZ6HNHodaPAxPZcHc2RRQuJ+wfEeBs/YGtjBIW+/CXKKtC2Hr
+        eWilU1C5o1CmD0Ke2gVX+dIaED4CR6TyE1jf+2HWeqicgl4+R+UTtPUIFPYA5MkOSBPbaMB4a8DcrVjd
+        kDiJyT/ztcojqOV7UPks1FIvFO4GlOJVyDMpyGwSMnMRxU8PAy4blyKdEL63/TKf2THE9W1vMJmY+Vf6
+        YuZ0Jibz6faBSP+ni5CfZkjnHgWkJaAAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="openButton.ToolTipText" xml:space="preserve">
     <value>Open a file...</value>
+  </data>
+  <data name="openFileDialog.Title" xml:space="preserve">
+    <value>Choose an image...</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

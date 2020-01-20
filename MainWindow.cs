@@ -48,13 +48,11 @@ namespace PicturePDF
 
 		private void OpenImageDialog(object sender, EventArgs e)
 		{
-			using OpenFileDialog dialog = new OpenFileDialog
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
-				Title = "Choose image..."
-			};
-			dialog.ShowDialog();
-			FileLabel.Text = dialog.FileName;
-			LoadImage(dialog.OpenFile());
+				FileLabel.Text = openFileDialog.FileName;
+				LoadImage(openFileDialog.OpenFile());
+			}
 		}
 
 		public void LoadImage(System.IO.Stream stream)
