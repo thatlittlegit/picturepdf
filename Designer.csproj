@@ -58,6 +58,9 @@
     <None Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </None>
+    <EmbeddedResource Include="MainWindow.en.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,6 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextFileButton.Image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="arrow_right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
