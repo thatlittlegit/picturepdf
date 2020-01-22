@@ -1,4 +1,4 @@
-﻿namespace PicturePDF
+namespace PicturePDF
 {
     partial class MainWindow
     {

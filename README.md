@@ -1,4 +1,4 @@
-﻿# PicturePDF
+# PicturePDF
 PicturePDF is a [WinForms] application for converting PNGs, JPEGs and other
 image files into PDF files.
 
