@@ -128,6 +128,9 @@
   <data name="FileLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>902, 25</value>
   </data>
+  <data name="FileLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 29</value>
   </data>
