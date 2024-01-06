@@ -38,6 +38,24 @@ namespace PicturePDF
 				yield return element;
 			}
 		}
+
+		public ImageModel ElementAtPosition(float x, float y)
+		{
+			foreach (var element in elements)
+			{
+				bool beyondLeftEdge = element.X <= x;
+				bool afterTopEdge = element.Y <= y;
+				bool withinRightEdge = element.X + element.Width >= x;
+				bool withinBottomEdge = element.Y + element.Height >= x;
+
+				if (beyondLeftEdge && afterTopEdge && withinRightEdge && withinBottomEdge)
+				{
+					return element;
+				}
+			}
+
+			return null;
+		}
 	}
 
 	internal class ImageModel

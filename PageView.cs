@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,10 @@ namespace PicturePDF
 	{
 		private float zoomFactorStore = 1.0f;
 		private PageModel pageModelStore = null;
+
+		private ImageModel grabbing = null;
+		private float grabXOffset = 0.0f;
+		private float grabYOffset = 0.0f;
 
 		private static readonly float PIXELS_PER_CENTIMETRE = 96.0f / 2.54f;
 
@@ -111,6 +116,34 @@ namespace PicturePDF
 			e.Graphics.Restore(state);
 
 			e.Graphics.DrawRectangle(outline, Rectangle.Round(area));
+		}
+
+		protected override void OnMouseMove(MouseEventArgs e)
+		{
+			base.OnMouseMove(e);
+
+			float cmX = e.X / PIXELS_PER_CENTIMETRE;
+			float cmY = e.Y / PIXELS_PER_CENTIMETRE;
+
+			grabbing?.Move(cmX - grabXOffset, cmY - grabYOffset);
+		}
+
+		protected override void OnMouseDown(MouseEventArgs e)
+		{
+			base.OnMouseDown(e);
+
+			float cmX = e.X / PIXELS_PER_CENTIMETRE;
+			float cmY = e.Y / PIXELS_PER_CENTIMETRE;
+
+			grabbing = Model.ElementAtPosition(cmX, cmY);
+			grabXOffset = cmX - grabbing.X;
+			grabYOffset = cmY - grabbing.Y;
+		}
+
+		protected override void OnMouseUp(MouseEventArgs e)
+		{
+			base.OnMouseUp(e);
+			grabbing = null;
 		}
 	}
 }
