@@ -9,7 +9,6 @@ namespace PicturePDF
 	public partial class MainWindow : Form
 	{
 		private PageModel page;
-		private ImageModel image;
 
 		private IDictionary<string, int> zoomMenuItems
 			= new Dictionary<string, int>();
@@ -51,7 +50,7 @@ namespace PicturePDF
 
 		private void AddImage(Stream stream)
 		{
-			image = new ImageModel(stream);
+			ImageModel image = new ImageModel(stream);
 			page.AddElement(image);
 		}
 
@@ -80,8 +79,6 @@ namespace PicturePDF
 				return;
 			}
 
-			Stream stream = new MemoryStream();
-			image.Content.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
 			new PdfSharpExporter().Export(page, output);
 		}
 
