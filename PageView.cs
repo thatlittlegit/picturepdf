@@ -23,6 +23,8 @@ namespace PicturePDF
 
 		private static readonly float PIXELS_PER_CENTIMETRE = 96.0f / 2.54f;
 
+		public event EventHandler ZoomFactorChanged;
+
 		public float ZoomFactor
 		{
 			get => zoomFactorStore;
@@ -31,6 +33,7 @@ namespace PicturePDF
 				zoomFactorStore = value;
 				UpdateScrollInfo();
 				Invalidate();
+				ZoomFactorChanged?.Invoke(this, new EventArgs());
 			}
 		}
 

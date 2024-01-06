@@ -32,9 +32,9 @@ namespace PicturePDF
 			toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			statusStrip1 = new System.Windows.Forms.StatusStrip();
 			FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			zoomLabel = new System.Windows.Forms.ToolStripDropDownButton();
 			tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			scaleBox = new System.Windows.Forms.GroupBox();
-			ScaleControl = new System.Windows.Forms.NumericUpDown();
 			Xlabel = new System.Windows.Forms.Label();
 			xBar = new System.Windows.Forms.TrackBar();
 			Ylabel = new System.Windows.Forms.Label();
@@ -52,8 +52,6 @@ namespace PicturePDF
 			toolStripContainer1.SuspendLayout();
 			statusStrip1.SuspendLayout();
 			tableLayoutPanel1.SuspendLayout();
-			scaleBox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)ScaleControl).BeginInit();
 			((System.ComponentModel.ISupportInitialize)xBar).BeginInit();
 			((System.ComponentModel.ISupportInitialize)yBar).BeginInit();
 			toolStrip1.SuspendLayout();
@@ -81,13 +79,21 @@ namespace PicturePDF
 			// 
 			resources.ApplyResources(statusStrip1, "statusStrip1");
 			statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { FileLabel });
+			statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { FileLabel, zoomLabel });
 			statusStrip1.Name = "statusStrip1";
 			// 
 			// FileLabel
 			// 
 			FileLabel.Name = "FileLabel";
 			resources.ApplyResources(FileLabel, "FileLabel");
+			FileLabel.Spring = true;
+			// 
+			// zoomLabel
+			// 
+			zoomLabel.Name = "zoomLabel";
+			zoomLabel.ShowDropDownArrow = false;
+			resources.ApplyResources(zoomLabel, "zoomLabel");
+			zoomLabel.DropDownItemClicked += zoomLabel_DropDownItemClicked;
 			// 
 			// tableLayoutPanel1
 			// 
@@ -103,19 +109,8 @@ namespace PicturePDF
 			// scaleBox
 			// 
 			resources.ApplyResources(scaleBox, "scaleBox");
-			scaleBox.Controls.Add(ScaleControl);
 			scaleBox.Name = "scaleBox";
 			scaleBox.TabStop = false;
-			// 
-			// ScaleControl
-			// 
-			resources.ApplyResources(ScaleControl, "ScaleControl");
-			ScaleControl.DecimalPlaces = 1;
-			ScaleControl.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-			ScaleControl.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
-			ScaleControl.Name = "ScaleControl";
-			ScaleControl.Value = new decimal(new int[] { 1, 0, 0, 0 });
-			ScaleControl.ValueChanged += ScaleChanged;
 			// 
 			// Xlabel
 			// 
@@ -147,9 +142,12 @@ namespace PicturePDF
 			// 
 			// pageView1
 			// 
-			tableLayoutPanel1.SetColumnSpan(pageView1, 6);
 			resources.ApplyResources(pageView1, "pageView1");
+			tableLayoutPanel1.SetColumnSpan(pageView1, 6);
+			pageView1.Model = null;
 			pageView1.Name = "pageView1";
+			pageView1.ZoomFactor = 1F;
+			pageView1.ZoomFactorChanged += pageView1_ZoomFactorChanged;
 			// 
 			// toolStrip1
 			// 
@@ -206,9 +204,6 @@ namespace PicturePDF
 			statusStrip1.PerformLayout();
 			tableLayoutPanel1.ResumeLayout(false);
 			tableLayoutPanel1.PerformLayout();
-			scaleBox.ResumeLayout(false);
-			scaleBox.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)ScaleControl).EndInit();
 			((System.ComponentModel.ISupportInitialize)xBar).EndInit();
 			((System.ComponentModel.ISupportInitialize)yBar).EndInit();
 			toolStrip1.ResumeLayout(false);
@@ -225,7 +220,6 @@ namespace PicturePDF
 		private System.Windows.Forms.TrackBar yBar;
 		private System.Windows.Forms.Label Ylabel;
 		private System.Windows.Forms.GroupBox scaleBox;
-		private System.Windows.Forms.NumericUpDown ScaleControl;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton previousFileButton;
 		private System.Windows.Forms.ToolStripButton nextFileButton;
@@ -235,6 +229,7 @@ namespace PicturePDF
 		private System.Windows.Forms.ToolStripStatusLabel FileLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private PageView pageView1;
+		private System.Windows.Forms.ToolStripDropDownButton zoomLabel;
 	}
 }
 

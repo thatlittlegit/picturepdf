@@ -1,6 +1,7 @@
 using System;
-using System.Drawing;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PicturePDF
@@ -10,9 +11,22 @@ namespace PicturePDF
 		private PageModel page;
 		private ImageModel image;
 
+		private IDictionary<string, int> zoomMenuItems
+			= new Dictionary<string, int>();
+
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			IList<ToolStripLabel> labels = new List<ToolStripLabel>();
+			foreach (var increment in new int[] { 25, 50, 75, 100, 125, 150, 175, 200, 400, 800 })
+			{
+				string label = increment + "%";
+				zoomMenuItems.Add(label, increment);
+				labels.Add(new ToolStripLabel(label));
+			}
+
+			zoomLabel.DropDownItems.AddRange(labels.ToArray());
 		}
 
 		#region Event implementations
@@ -20,8 +34,6 @@ namespace PicturePDF
 		private void UpdateAll(object sender, EventArgs e) => UpdateAll();
 
 		private void UpdateAll(object sender, LayoutEventArgs e) => UpdateAll();
-
-		private void ScaleChanged(object sender, EventArgs e) => ScaleChanged();
 
 		private void UpdateXOffset(object sender, EventArgs e) => UpdateXOffset();
 
@@ -61,10 +73,10 @@ namespace PicturePDF
 			image = new ImageModel(stream);
 			page.AddElement(image);
 
-			xBar.Minimum = (int) -image.Width;
-			xBar.Maximum = (int) +image.Width;
-			yBar.Minimum = (int) -image.Height;
-			yBar.Maximum = (int) +image.Height;
+			xBar.Minimum = (int)-image.Width;
+			xBar.Maximum = (int)+image.Width;
+			yBar.Minimum = (int)-image.Height;
+			yBar.Maximum = (int)+image.Height;
 		}
 
 		private void MakePdfButtonPressed(object sender, EventArgs e)
@@ -89,12 +101,17 @@ namespace PicturePDF
 			new PdfSharpExporter().Export(page, output);
 		}
 
-		private void ScaleChanged()
-		{
-			pageView1.ZoomFactor = (float) ScaleControl.Value;
-		}
-
 		private void UpdateXOffset() => image?.Move(xBar.Value, -1);
 		private void UpdateYOffset() => image?.Move(-1, yBar.Value);
+
+		private void zoomLabel_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+			pageView1.ZoomFactor = zoomMenuItems[e.ClickedItem.Text] / 100.0f;
+		}
+
+		private void pageView1_ZoomFactorChanged(object sender, EventArgs e)
+		{
+			zoomLabel.Text = ((int) (pageView1.ZoomFactor * 100)).ToString() + "%";
+		}
 	}
 }

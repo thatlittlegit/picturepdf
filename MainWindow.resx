@@ -126,13 +126,22 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 16</value>
+    <value>902, 25</value>
+  </data>
+  <data name="zoomLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 29</value>
+  </data>
+  <data name="zoomLabel.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="zoomLabel.ToolTipText" xml:space="preserve">
+    <value>Zoom</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>782, 22</value>
+    <value>978, 32</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -168,41 +177,11 @@
   <data name="scaleBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ScaleControl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ScaleControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ScaleControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
-  </data>
-  <data name="ScaleControl.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>60, 0</value>
-  </data>
-  <data name="ScaleControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 27</value>
-  </data>
-  <data name="ScaleControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ScaleControl.Name" xml:space="preserve">
-    <value>ScaleControl</value>
-  </data>
-  <data name="&gt;&gt;ScaleControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ScaleControl.Parent" xml:space="preserve">
-    <value>scaleBox</value>
-  </data>
-  <data name="&gt;&gt;ScaleControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="scaleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 3</value>
+    <value>580, 3</value>
   </data>
   <data name="scaleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 53</value>
+    <value>6, 5</value>
   </data>
   <data name="scaleBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -228,6 +207,7 @@
   <data name="Xlabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Xlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
@@ -339,6 +319,9 @@
   <data name="&gt;&gt;yBar.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="pageView1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="pageView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -346,7 +329,7 @@
     <value>3, 82</value>
   </data>
   <data name="pageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>972, 555</value>
+    <value>972, 545</value>
   </data>
   <data name="pageView1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -376,7 +359,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 640</value>
+    <value>978, 630</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -400,7 +383,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 640</value>
+    <value>978, 630</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.Name" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -490,15 +473,15 @@
   <data name="pdfGeneratingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHrSURBVDhPjZPNaxNhEIerRylphVZ6aIv/gKeW4KnHngQF
-        6bHipcVK9WBtrFIJBaFnSUOEigqF9lB682BPBnKyWiy0JiX9Qkl2u0k2yX5ld5PUnzOvdEmTDTrwwPuy
-        Mw8zs7sdDdFPDBHBf3CduEy0xFClUiknk8mzer0OPxzHQSQSeU25vpIgF5uaBu3VHIzPm7AsCxrdS6US
-        FEURElmWEY1GWySXiCAn2IYOLTwDa+cbbNuGYRgol8vI5XJCQF3CNE3EYrFziQhP4LouiqEp6KvvhIAL
-        dF1HPp+/MA7DNaKawhPUajUUw09hbKyKM899PkqhUBCdSJLUXsDkHoyjEJoW50YJd8L7UFW1vcA5PoR0
-        7y5OH96Hndy7IOFxeCcsaiuQZx9BfRuDfXSA7BRJDtMiuVqtiv2whPEVuIqMk7FbcLIZVNL7yDyeRPrm
-        DZzcGcWviXFknz+Bur4muvEVZF4+Q3bhBUqfPiK/8h5aIg7zxy6kxQX8nJ5AZj4E5cNyqyAx2HX1TU8g
-        fDB2G27x74IYnp3h9hlbOYVLO+CzJ9ju6x7Z7utajF/r/q5//eIVN0ua8QRbvYHlrZ7OzaXAlXAqlfrd
-        LGgH5Z4JQUMM0+ux+IFfQSOcQ5+zQTX893oxQAwTbP0fqLhj4A+rrW9OIO3GlAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHsSURBVDhPjZPPSxRhGMe1Y8hqYOIho3+gk7J06uhJMBCP
+        RhcjwzqkrSnKIgSeZVtWMCwI7BDdOuQpQdglSxKsiPUXyu6Ms7uzu/NrZ2Z39dvzvOKw7s5SD3zgfZnn
+        +fA8z8y01MQNopcI/oNbxBWiIXpLpVIxHo+fVqtV+OE4DiKRyCLl+kqCXGxqGrSXL2B8WYNlWdDoXigU
+        oCiKkMiyjGg02iBpJYKcYBs6tPAErO3vsG0bhmGgWCwik8kIAXUJ0zQRi8UuJCI8geu6yIfGoK+uCAEX
+        6LqObDZ7aRyGa0Q1hSeoVCrIhydhfFwVZ577YpRcLic6kSSpuYDJPBpBLjQuzrUS7oT3oapqc4FzsAfp
+        /hBOHj+A/fvnJQmPwzthUVOB/PwJ1Ncx2Pu7SI+RZC8pksvlstgPSxhfgavIOBwegJNOoZT8g9TTh0je
+        uY3De/04Hh1BevoZ1A/vRTe+gtTcFNLzMyh8/oTsuzfQNtZh/tqBtDCPo/FRpGZDUN4uNwo2brZfW+oM
+        hHeHB+HmzxfE8OwMt8/Yyglc2gGfPcFWd8fdre72hfWujh/6t69ecb2kHk+weT2wvNnZtvYqcDWcSCTO
+        6gXNoNxTIaiJPno9Fj/wK6iFc+hzNqiG/14veog+gq3/AxW39PwF8T9uLjFipPcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pdfGeneratingButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -510,16 +493,16 @@
   <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIQSURBVDhP3Y/NaxNBHIbn4L03/wQP1tSP2Kh48CKIIHgR
-        PagnEbQElAgFRdAe0kaESGkUEVHEUsHWih8I4iF6akxtNm3WZpuktdvW0A02+/292dfZdpXGg1fBYR5m
-        5vC872/If7Jm30aL/OtjztIfVN/tn6+96No6/zza0caHaEc2e2hLqBOSexqzfL8FwKc7YOPumg2sZHvs
-        5YnT1i/qU5dMfiLBc6/2nAx1QtiX3ZLvmbBW0tAXBqEvPobBj8F3RZqlwfdUirzxdpsQBMHmxmNsqBNS
-        GdmttByZyhlotSEoX/uwlu9BYzIOsZSEOHMTYvEamkwvJUEnE1AZ36uGOg0Y7XZcYxUim0GzkILw6QoM
-        4TNtVcL24JR+TxB8jxndaYZ6MME+Z/3/LYtiAJ6+LnoGB6uegbmchPGtF3r1AjTuDDytDGZ4c0AmZvue
-        AU/JwRXfw/kxBnv1IRVvw1i8DqMWhz53Ftrscailw/DUIpg7mwJyD2JWy1HgrL2BLQzT1rswl2jrQtB6
-        Hlr5FFT2KJTpg5ALu+AqX9oDgofviFR+Auv7IEy+j8oJ6JVzVD5BW49AKR6APNUFaXIbDci3B8zditQN
-        iZXy2WctrfoIauUeVC4NtdwPhb0BpXQV8kwCcjEOmbmIwsf7PpuOSqFOCNffeZlL7RhhB7Y3mFTE/CsD
-        EXM6FZG5ZOdQqP/TRchPVWPnCkHPXL8AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIRSURBVDhP3Y/NaxNBHIbn4L03/wQP1tSP2Kh48CKIIHgR
+        PagnEbQElAgFRdAe0kaESGn0IKKIpYKt9RNBBBdPja3tbpu12SZp7bY1dIPNfn9kd7Ovs+0qjQevgsM8
+        zMzhed/fkP9kzb6Nc+LrY+7SH5Tf7Z+vPO/YOv8s3tbCh3gbwxzaEumE5J8knCBoAgjoDtm4e3YNK0xX
+        Y3nstPOL6uQlWxxLicKrPScjnRD+RacS+DaclSzMhX6Yi49giSMIPJlmGQh8naJuvL06JElqCKMJPtIJ
+        KQ3t1pquSuUcjMoAtK89WBvvQm0iCbmQhjxzEzJ3DXW2m5Kik0koje7VI50GDHe6nrUKmc+hPpWB9OkK
+        LOkzbdWi9vBUfk8Qfo8d3mlHejjBPnf9/02HYgG+uS76lgCnmoO9nIb1rRtm+QIM4Qx8owh2cHNALtEI
+        fAu+locnv4f7YwSN1QdUvA1r8TqsShLm3FkYs8ehFw7D1zmwdzYF5O8nnKarwV17g4Y0SFvvwl6irQth
+        63kYxVPQ+aPQpg9CndoFT/vSGhA+Alem8mM43/thiz1UTsEsnaPyCdp6BBp3AOpkB5SJbTRgvDVg7las
+        aim8wjBPm0b5IfTSPehCFnqxFxp/A1rhKtSZFFQuCZW9iI8vMwGfjSuRTojQ235ZyOwY4vu219hMzP4r
+        fTF7OhNThXT7QKT/00XITyQm5s8xeGXOAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="openButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -620,6 +603,12 @@
   </data>
   <data name="&gt;&gt;FileLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomLabel.Name" xml:space="preserve">
+    <value>zoomLabel</value>
+  </data>
+  <data name="&gt;&gt;zoomLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;previousFileButton.Name" xml:space="preserve">
     <value>previousFileButton</value>
