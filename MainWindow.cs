@@ -86,7 +86,7 @@ namespace PicturePDF
 
 			Stream stream = new MemoryStream();
 			image.Content.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
-			Program.MakePdf(stream, output, (xBar.Value, yBar.Value));
+			new PdfSharpExporter().Export(page, output);
 		}
 
 		private void ScaleChanged()

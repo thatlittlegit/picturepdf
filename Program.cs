@@ -20,18 +20,5 @@ namespace PicturePDF
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainWindow());
 		}
-
-		public static void MakePdf(System.IO.Stream imageStream, System.IO.Stream output, (float, float) point)
-		{
-			using PdfDocument document = new PdfDocument();
-
-			PdfPage page = document.AddPage();
-			page.Height = new XUnit() { Centimeter = 21.75 };
-			page.Width = new XUnit() { Centimeter = 13.9 };
-			XGraphics gfx = XGraphics.FromPdfPage(page);
-
-			gfx.DrawImage(XImage.FromStream(imageStream), new XPoint(XUnit.FromInch(point.Item1), XUnit.FromInch(point.Item2)));
-			document.Save(output);
-		}
 	}
 }

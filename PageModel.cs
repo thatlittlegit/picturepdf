@@ -81,5 +81,12 @@ namespace PicturePDF
 			Y = y == -1 ? Y : y;
 			Changed?.Invoke(this, null);
 		}
+
+		public Stream StreamBitmap()
+		{
+			Stream stream = new MemoryStream();
+			Content.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
+			return stream;
+		}
 	}
 }
