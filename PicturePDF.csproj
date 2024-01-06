@@ -2,13 +2,14 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>8.0</LangVersion>
+    <StartupObject>PicturePDF.Program</StartupObject>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="PdfSharp" Version="1.51.5185-beta" />
+    <PackageReference Include="PdfSharp" Version="6.0.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
   </ItemGroup>
 
