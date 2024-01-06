@@ -135,9 +135,9 @@ namespace PicturePDF
 			float cmX = e.X / PIXELS_PER_CENTIMETRE;
 			float cmY = e.Y / PIXELS_PER_CENTIMETRE;
 
-			grabbing = Model.ElementAtPosition(cmX, cmY);
-			grabXOffset = cmX - grabbing.X;
-			grabYOffset = cmY - grabbing.Y;
+			grabbing = Model?.ElementAtPosition(cmX, cmY);
+			grabXOffset = grabbing != null ? cmX - grabbing.X : 0.0f;
+			grabYOffset = grabbing != null ? cmY - grabbing.Y : 0.0f;
 		}
 
 		protected override void OnMouseUp(MouseEventArgs e)

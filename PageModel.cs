@@ -46,7 +46,7 @@ namespace PicturePDF
 				bool beyondLeftEdge = element.X <= x;
 				bool afterTopEdge = element.Y <= y;
 				bool withinRightEdge = element.X + element.Width >= x;
-				bool withinBottomEdge = element.Y + element.Height >= x;
+				bool withinBottomEdge = element.Y + element.Height >= y;
 
 				if (beyondLeftEdge && afterTopEdge && withinRightEdge && withinBottomEdge)
 				{
