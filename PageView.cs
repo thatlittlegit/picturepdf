@@ -27,6 +27,7 @@ namespace PicturePDF
 		private static readonly float PIXELS_PER_CENTIMETRE = 96.0f / 2.54f;
 
 		public event EventHandler ZoomFactorChanged;
+		public event EventHandler<ImageModel> SelectionChanged;
 
 		public float ZoomFactor
 		{
@@ -155,6 +156,9 @@ namespace PicturePDF
 			grabbing = Model?.ElementAtPosition(cmX, cmY);
 			grabXOffset = grabbing != null ? cmX - grabbing.X : 0.0f;
 			grabYOffset = grabbing != null ? cmY - grabbing.Y : 0.0f;
+
+			SelectionChanged(this, grabbing);
+			Invalidate();
 		}
 
 		private Tuple<float, float> XYtoCentimetre(float x, float y)

@@ -31,10 +31,10 @@ namespace PicturePDF
 
 		private void addAdditionalImageButton_Click(object sender, EventArgs e)
 		{
-			var (stream, _) = OpenFileDialog();
+			var (stream, name) = OpenFileDialog();
 			if (stream != null)
 			{
-				AddImage(stream);
+				AddImage(stream, name);
 			}
 		}
 
@@ -81,21 +81,21 @@ namespace PicturePDF
 		private void OpenPrimaryFile(Stream stream, string name)
 		{
 			ResetPage();
-			if (!AddImage(stream))
+			if (!AddImage(stream, name))
 			{
 				return;
 			}
 
 			currentPath = name;
-			FileLabel.Text = currentPath;
+			FileLabel.Text = "";
 			Text = currentPath;
 		}
 
-		private bool AddImage(Stream stream)
+		private bool AddImage(Stream stream, string label)
 		{
 			try
 			{
-				ImageModel image = new ImageModel(stream);
+				ImageModel image = new ImageModel(stream, label);
 				page.AddElement(image);
 				return true;
 			}
@@ -221,6 +221,11 @@ namespace PicturePDF
 					yield return name;
 				}
 			}
+		}
+
+		private void pageView_SelectionChanged(object sender, ImageModel e)
+		{
+			FileLabel.Text = e.Label;
 		}
 	}
 }

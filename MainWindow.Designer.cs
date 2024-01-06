@@ -95,6 +95,7 @@ namespace PicturePDF
 			pageView.Name = "pageView";
 			pageView.ZoomFactor = 1F;
 			pageView.ZoomFactorChanged += pageView_ZoomFactorChanged;
+			pageView.SelectionChanged += pageView_SelectionChanged;
 			// 
 			// toolStrip1
 			// 

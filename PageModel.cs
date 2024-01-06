@@ -63,6 +63,7 @@ namespace PicturePDF
 	{
 		public float X { get; internal set; }
 		public float Y { get; internal set; }
+		public string Label { get; }
 
 		public float Width => 2.54f * Content.Width / Content.HorizontalResolution;
 		public float Height => 2.54f * Content.Height / Content.VerticalResolution;
@@ -71,9 +72,10 @@ namespace PicturePDF
 
 		public event EventHandler<EventArgs> Changed;
 
-		public ImageModel(Stream input)
+		public ImageModel(Stream input, string label)
 		{
 			Content = Image.FromStream(input);
+			Label = label;
 		}
 
 		public void Move(float x, float y)
