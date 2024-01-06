@@ -174,31 +174,31 @@
   <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pageView1.AutoScroll" type="System.Boolean, mscorlib">
+  <data name="pageView.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pageView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="pageView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="pageView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pageView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="pageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 630</value>
+  <data name="pageView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>978, 625</value>
   </data>
-  <data name="pageView1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="pageView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;pageView1.Name" xml:space="preserve">
-    <value>pageView1</value>
+  <data name="&gt;&gt;pageView.Name" xml:space="preserve">
+    <value>pageView</value>
   </data>
-  <data name="&gt;&gt;pageView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;pageView.Type" xml:space="preserve">
     <value>PicturePDF.PageView, PicturePDF, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;pageView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pageView.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
   </data>
-  <data name="&gt;&gt;pageView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pageView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -206,7 +206,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 630</value>
+    <value>978, 625</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.Name" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -277,7 +277,28 @@
 </value>
   </data>
   <data name="previousFileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 24</value>
+    <value>34, 29</value>
+  </data>
+  <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAISSURBVDhP3Y/NSxRhHMefQ3dv/QkdsrWXza3o0CWIIOgS
+        dShPEZQsFBsIRWAeVjeCDXHzEFJIYqBm9EIQHYZObprO6k7uuLuao7Y4S+68v+zM7Hx7RqdwO3QNeng+
+        PM9z+Hy/v4f8J2vxXTQnvDnnrP1B6f3x5fLLtr3LY9GWJj5GWxjm1J5QJyT7PGb7fgOAT3fAzt21qthg
+        OuvrU5ftX1Rmb1rCVELgXx+5GOqEcK/aZd+zYG+kYaz0w1h9BlOYgO9KNEuH72kUZeft1iCKYp2fjHGh
+        Tkhx9LDacBQqZ6CXB6B+7cHWdCeqM3FI+SSkhfuQcndRY7soCTqZiOLkUS3UacB4u+Oam5C4DGpzKYif
+        bsMUP9NWNWwPTvn3BMH32PGDVqgHExxztv/fsCkm4BnbomfysCsZWOtJmN+6YJSuQ+evwNMLYEd2B2Ri
+        dd8z4alZuNIHOD8mUN8couJDmKv3YJbjMJY6oC+eh5Y/DU/LgX20KyD7JGY3HBXO1lvUxRHa+hjWGm1d
+        CVqvQS9cgsadhTp/EsrcIbjql+aA4OE7EpWHYX/vhyX0UDkBo3iVyhdo6xmouRNQZtsgz+yjAdPNAUsP
+        IhVT5mSGedHQS0+hFQeh8WlohV6oXDfU/B0oCwkouTgU9gbGhrp9Lh2VQ50Qvrf1Fp86MMr17a+yqYj1
+        V/oi1nwqovDJ1oFQ/6eLkJ/8nuaerXK5SwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="openButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="openButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 29</value>
   </data>
   <data name="nextFileButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -291,54 +312,68 @@
 </value>
   </data>
   <data name="nextFileButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 24</value>
+    <value>34, 29</value>
   </data>
   <data name="pdfGeneratingButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHsSURBVDhPjZPPSxRhGMe1Y8hqYOIho3+gk7J06uhJMBCP
-        RhcjwzqkrSnKIgSeZVtWMCwI7BDdOuQpQXYhSxKsiPUXyu6Ms7uzu/NrZ2Z39dvzvOKw7s5SD3zgfZnn
-        +fA8z8y01MQNopcI/oNbxBWiIXpLpVIxHo+fVqtV+OE4DiKRyCLl+kqCXGxqGrSXL2B8WYNlWdDoXigU
-        oCiKkMiyjGg02iBpJYKcYBs6tPAErO3vsG0bhmGgWCwik8kIAXUJ0zQRi8UuJCI8geu6yIfGoK+uCAEX
-        6LqObDZ7aRyGa0Q1hSeoVCrIhydhfFwVZ577YpRcLic6kSSpuYDJPBpBLjQuzrUS7oT3oapqc4FzsAfp
-        /hBOHj+A/fvnJQmPwzthUVOB/PwJ1Ncx2Pu7SI+RZC8pksvlstgPSxhfgavIOBwegJNOoZT8g9TTh0je
-        uY3De/04Hh1BevoZ1A/vRTe+gtTcFNLzMyh8/oTsuzfQNtZh/tqBtDCPo/FRpGZDUN4uNwo2brZfW+oM
-        hHeHB+HmzxfE8OwMt8/Yyglc2gGfPcFWd8fdre72hfWujh/6t69ecb2kHk+weT2wvNnZtvYqcDWcSCTO
-        6gXNoNxTIaiJPno9Fj/wK6iFc+hzNqiG/14veog+gq3/AxW39PwF1ZpuHHAVSeEAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHoSURBVDhPjZPLSxtRFIety1KiBS0uqvgPuFKCK5euCi2U
+        LBU3ERXrorbRSksQClmXNKSgqCDoQtxJ0FUEV1qlQh9IfNGSzDhJJsm8MjNJ2p/33JIh5qEe+OAO3N/H
+        OSe5TRX1lNHLcN9BN6OZUVO9+Xw+F41G/5ZKJdTDsiwEg8FP7G5diZvCuqJA+TgLLboDwzCgsO9sNgtJ
+        krhEFEWEQqEayQOGmy6YmgrFPw3j+BCmaULTNORyOSSTSS5gXULXdYTD4bKElyOwbRsZ3zjUtSUuoICq
+        qkilUjfGISjD06wcQbFYRMb/BtrmGj/T3OVR0uk070QQhMYCIjk2hLRvkp8rJdQJ7UOW5cYC6+IMwvBL
+        XE2MwPz144aExqGdkKihQHz7CvJiGOb5KRLjTHIW45cLhQLfD0mIugJbEnHpeQYrEUc+doL41Chi/T24
+        fDGIP94hJN69hryxzrupK4h/mEFifg7Z7S2kVpeh7O1C//kdQmAevye9iL/3QVpZqBXsdbU8/tLm8p96
+        nsPO/F8QQbMT1D5hSlew2Q7o7AiOOloHjjpaArtPWr+pX/edcLWkGkdw0O5aOGh7tPPZ9dAfiUT+VQsa
+        QX97LqioPvbzGLc9pjL8zei6xjL0ep3qZPQxyHofWLip8xoWt22JokjjiwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pdfGeneratingButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="pdfGeneratingButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 24</value>
+    <value>138, 29</value>
   </data>
-  <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pdfGeneratingButton.Text" xml:space="preserve">
+    <value>Produce PDF</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 34</value>
+  </data>
+  <data name="addAdditionalImageButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="addAdditionalImageButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIRSURBVDhP3Y/LaxNBHMfn4L03/wQP1tRH2qh48CKIIHgR
-        PagnEbQElAgFRdAe0kSESGn0IGIRSwVbW3wgiEjw1Nja7rZZm22S1qatoRts9v3Ivr7Otqs0HrwKDvNh
-        Zg6f7/c35D9Z82+jbPX1SXvlD8rvDi1WXnbsXHwRbWvhQ7Qtlzu6I9QJyT+LWb7vAfDpDti6O2Yda7nu
-        5urEOesXtemrZnUiUeVfHTgT6oRw412S75qw1jLQl/qhLw/CqI7Cd0SapcF3VYq89XYaEAShyY/FuFAn
-        pDS8X/FsmcpZaJUBKF97sTHZjfpUHGIhCXHuDkT2JhpMDyVBJxNQGutUQ50GjHTZjrEOkcuiMZOG8Ok6
-        DOEzbVXC9uCUfk8QfI8Z2WuGejDBQXvz/55FMQBX3xRdg4dVy8JcTcL41gO9fBkafx6uVgQztD0gG2v6
-        rgFXycMR38P+MYrm+mMq3oOxfAtGJQ594QK0+VNQC8fgqiyY+9sC8o9ilmcrsDfeoCkM0dYHMFdo61LQ
-        egla8SxU7gSU2SOQZ/bBUb60BgQP3xap/BTW936Y1V4qJ6CXLlL5NG09DoU9DHm6A9LULhow2RqwcDdS
-        MyROyuWee1r5CdTSQ6h8BmqxDwp3G0rhBuS5BGQ2Dpm5go/jKZ/LRKVQJ4Tva7/Gp/cMc6nddSYdMf9K
-        KmLOpiMyn2wfCPV/ugj5CSG85szcFWX8AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ8SURBVDhPrZP9S1NRGMfv3+KKfmgViUZFgi9ECUbipfK1
+        Vb6kLt1mi9z0br7PXXPi23WjzIK2cluMdNPNl5GKmWxq6SL1OpRoowiC2vDXb/fWtSFaEPSB89vz+Z7z
+        POcc4r9DTypFrR451eisYOuGr0eULyQR5XMJW2WTUBVPr4qEsv2hxxWkzq0IP1nsgS88g8CXJSx+noc7
+        6IDWU4Ey8+Vw8UAWKZTvhpe1jtLo+IYDW983MPlxBGb2Ph6tMXBsmjH76SXoaRUkTGY035SxO0Q3Lo9r
+        cslDo+tWbHxbRf9qF7oXWmHwN4EJtKE3QMOw3IjRLQcojxSk8Xwoi0mLE3QuwC3T9M014/3XZW7HXvSs
+        0NC/1mKH5gUVamek0MzJ4Nq048rDs8joTNYIOkHwAxsJ2rmjWnDPV4+W+VqoJisFHSi35+HuxDXcHsuH
+        6W0bumbrcM5whhV0gtAMFW57P4yg710bJ6sFbS9ydw40U2WwBvqR2nBsW9AJQu0o3B4ODoJeolDvvyOU
+        74UPoLw3YQs8QJL2cCxAaZewRj8NZkUP9Ssp5FOFKLZdErRfIr+qPHno8zej3VuDU41HYy3IBgs0pTYS
+        zqAVqqkiKLySnz3vwMuVrmwoR/PhXLcgreMkEurFsSGWmXPjSh6TIcpTjiH22e+B8aLMxS9ezsPwmhm3
+        rLlIaBCHjmgPxq6R58bARbKAuRCtdhbBxYUY/TpQEyWoHSuC0dcCJydLrdlI0Iqix6lD+7/GHFM6SXan
+        hjNNKeiYpmB5w8CyxEDvrUZq+wlOFof/KO+Q2ZkiSjckUWn0aTZZnxhJ1MVHErmBxdeJqfiaA3//TP8O
+        QfwA4WbPMINAWMgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="openButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="addAdditionalImageButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="openButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 24</value>
+  <data name="addAdditionalImageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 29</value>
+  </data>
+  <data name="addAdditionalImageButton.Text" xml:space="preserve">
+    <value>Add Additional Image...</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 29</value>
+    <value>978, 34</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -439,6 +474,12 @@
   <data name="&gt;&gt;previousFileButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;openButton.Name" xml:space="preserve">
+    <value>openButton</value>
+  </data>
+  <data name="&gt;&gt;openButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;nextFileButton.Name" xml:space="preserve">
     <value>nextFileButton</value>
   </data>
@@ -451,10 +492,16 @@
   <data name="&gt;&gt;pdfGeneratingButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openButton.Name" xml:space="preserve">
-    <value>openButton</value>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
-  <data name="&gt;&gt;openButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addAdditionalImageButton.Name" xml:space="preserve">
+    <value>addAdditionalImageButton</value>
+  </data>
+  <data name="&gt;&gt;addAdditionalImageButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">

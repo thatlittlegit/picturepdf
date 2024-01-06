@@ -33,13 +33,15 @@ namespace PicturePDF
 			statusStrip1 = new System.Windows.Forms.StatusStrip();
 			FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			zoomLabel = new System.Windows.Forms.ToolStripDropDownButton();
+			pageView = new PageView();
 			toolStrip1 = new System.Windows.Forms.ToolStrip();
 			previousFileButton = new System.Windows.Forms.ToolStripButton();
+			openButton = new System.Windows.Forms.ToolStripButton();
 			nextFileButton = new System.Windows.Forms.ToolStripButton();
 			pdfGeneratingButton = new System.Windows.Forms.ToolStripButton();
-			openButton = new System.Windows.Forms.ToolStripButton();
+			toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			addAdditionalImageButton = new System.Windows.Forms.ToolStripButton();
 			openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			pageView = new PageView();
 			toolStripContainer1.BottomToolStripPanel.SuspendLayout();
 			toolStripContainer1.ContentPanel.SuspendLayout();
 			toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -86,11 +88,19 @@ namespace PicturePDF
 			resources.ApplyResources(zoomLabel, "zoomLabel");
 			zoomLabel.DropDownItemClicked += zoomLabel_DropDownItemClicked;
 			// 
+			// pageView
+			// 
+			resources.ApplyResources(pageView, "pageView");
+			pageView.Model = null;
+			pageView.Name = "pageView";
+			pageView.ZoomFactor = 1F;
+			pageView.ZoomFactorChanged += pageView_ZoomFactorChanged;
+			// 
 			// toolStrip1
 			// 
 			resources.ApplyResources(toolStrip1, "toolStrip1");
 			toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { previousFileButton, nextFileButton, pdfGeneratingButton, openButton });
+			toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { previousFileButton, openButton, nextFileButton, pdfGeneratingButton, toolStripSeparator1, addAdditionalImageButton });
 			toolStrip1.Name = "toolStrip1";
 			toolStrip1.Stretch = true;
 			// 
@@ -99,6 +109,13 @@ namespace PicturePDF
 			previousFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			resources.ApplyResources(previousFileButton, "previousFileButton");
 			previousFileButton.Name = "previousFileButton";
+			// 
+			// openButton
+			// 
+			openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			resources.ApplyResources(openButton, "openButton");
+			openButton.Name = "openButton";
+			openButton.Click += openButton_Click;
 			// 
 			// nextFileButton
 			// 
@@ -113,21 +130,16 @@ namespace PicturePDF
 			pdfGeneratingButton.Name = "pdfGeneratingButton";
 			pdfGeneratingButton.Click += MakePdfButtonPressed;
 			// 
-			// openButton
+			// toolStripSeparator1
 			// 
-			openButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-			openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			resources.ApplyResources(openButton, "openButton");
-			openButton.Name = "openButton";
-			openButton.Click += OpenImageDialog;
+			toolStripSeparator1.Name = "toolStripSeparator1";
+			resources.ApplyResources(toolStripSeparator1, "toolStripSeparator1");
 			// 
-			// pageView1
+			// addAdditionalImageButton
 			// 
-			resources.ApplyResources(pageView, "pageView1");
-			pageView.Model = null;
-			pageView.Name = "pageView1";
-			pageView.ZoomFactor = 1F;
-			pageView.ZoomFactorChanged += pageView_ZoomFactorChanged;
+			resources.ApplyResources(addAdditionalImageButton, "addAdditionalImageButton");
+			addAdditionalImageButton.Name = "addAdditionalImageButton";
+			addAdditionalImageButton.Click += addAdditionalImageButton_Click;
 			// 
 			// MainWindow
 			// 
@@ -157,12 +169,14 @@ namespace PicturePDF
 		private System.Windows.Forms.ToolStripButton previousFileButton;
 		private System.Windows.Forms.ToolStripButton nextFileButton;
 		private System.Windows.Forms.ToolStripButton pdfGeneratingButton;
-		private System.Windows.Forms.ToolStripButton openButton;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel FileLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.ToolStripDropDownButton zoomLabel;
 		private PageView pageView;
+		private System.Windows.Forms.ToolStripButton openButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripButton addAdditionalImageButton;
 	}
 }
 

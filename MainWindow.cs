@@ -29,22 +29,38 @@ namespace PicturePDF
 			zoomLabel.DropDownItems.AddRange(labels.ToArray());
 		}
 
-		private void OpenImageDialog(object sender, EventArgs e)
+		private void addAdditionalImageButton_Click(object sender, EventArgs e)
+		{
+			OpenImageDialog();
+		}
+
+		private void openButton_Click(object sender, EventArgs e)
+		{
+			ResetPage();
+			OpenImageDialog();
+		}
+
+		private void OpenImageDialog()
 		{
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
 				FileLabel.Text = openFileDialog.FileName;
-				LoadImage(openFileDialog.OpenFile());
+				AddImage(openFileDialog.OpenFile());
 			}
 		}
 
-		public void LoadImage(Stream stream)
+		private void AddImage(Stream stream)
+		{
+			image = new ImageModel(stream);
+			page.AddElement(image);
+		}
+
+		private void ResetPage()
 		{
 			page = new PageModel(8.5f * 2.54f, 11f * 2.54f);
 			pageView.Model = page;
 
-			image = new ImageModel(stream);
-			page.AddElement(image);
+			addAdditionalImageButton.Enabled = true;
 		}
 
 		private void MakePdfButtonPressed(object sender, EventArgs e)
