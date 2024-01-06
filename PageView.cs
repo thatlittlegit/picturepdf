@@ -21,6 +21,8 @@ namespace PicturePDF
 		private float grabXOffset = 0.0f;
 		private float grabYOffset = 0.0f;
 
+		private bool holdingControl = false;
+
 		private static readonly float PIXELS_PER_CENTIMETRE = 96.0f / 2.54f;
 
 		public event EventHandler ZoomFactorChanged;
@@ -152,6 +154,31 @@ namespace PicturePDF
 		{
 			base.OnMouseUp(e);
 			grabbing = null;
+		}
+
+		protected override void OnKeyDown(KeyEventArgs e)
+		{
+			base.OnKeyDown(e);
+			holdingControl = e.Control;
+		}
+
+		protected override void OnKeyUp(KeyEventArgs e)
+		{
+			base.OnKeyDown(e);
+			holdingControl = e.Control;
+		}
+
+		protected override void OnMouseWheel(MouseEventArgs e)
+		{
+			if (holdingControl)
+			{
+				float adjusted = ZoomFactor + (ZoomFactor * 0.2f * e.Delta / 120f);
+
+				ZoomFactor = Math.Clamp(adjusted, 0.1f, 8.0f);
+				return;
+			}
+
+			base.OnMouseWheel(e);
 		}
 	}
 }
