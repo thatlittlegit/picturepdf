@@ -46,12 +46,7 @@ namespace PicturePDF
 				return;
 			}
 
-			ResetPage();
-			AddImage(stream);
-
-			currentPath = name;
-			FileLabel.Text = currentPath;
-			Text = currentPath;
+			OpenPrimaryFile(stream, name);
 		}
 
 		private (Stream, string) OpenFileDialog()
@@ -64,10 +59,65 @@ namespace PicturePDF
 			return (null, null);
 		}
 
-		private void AddImage(Stream stream)
+		private void OpenPrimaryFile(string name)
 		{
-			ImageModel image = new ImageModel(stream);
-			page.AddElement(image);
+			Stream stream;
+			try
+			{
+				stream = new FileStream(name, FileMode.Open);
+			}
+			catch (Exception e)
+			{
+				Complain("Could not open '" + name + "': " + e.Message);
+				return;
+			}
+
+			using (stream)
+			{
+				OpenPrimaryFile(stream, name);
+			}
+		}
+
+		private void OpenPrimaryFile(Stream stream, string name)
+		{
+			ResetPage();
+			if (!AddImage(stream))
+			{
+				return;
+			}
+
+			currentPath = name;
+			FileLabel.Text = currentPath;
+			Text = currentPath;
+		}
+
+		private bool AddImage(Stream stream)
+		{
+			try
+			{
+				ImageModel image = new ImageModel(stream);
+				page.AddElement(image);
+				return true;
+			}
+			catch (Exception e)
+			{
+				Complain("Could not add image: " + e.Message);
+				return false;
+			}
+		}
+
+		private void Complain(string message)
+		{
+			TaskDialog.ShowDialog(this, new TaskDialogPage
+			{
+				Caption = "PicturePDF",
+				Text = message,
+				Buttons = new TaskDialogButtonCollection
+					{
+						"OK"
+					},
+				Icon = TaskDialogIcon.Error,
+			});
 		}
 
 		private void ResetPage()
@@ -76,6 +126,9 @@ namespace PicturePDF
 			pageView.Model = page;
 
 			addAdditionalImageButton.Enabled = true;
+			nextFileButton.Enabled = true;
+			previousFileButton.Enabled = true;
+			pdfGeneratingButton.Enabled = true;
 		}
 
 		private void MakePdfButtonPressed(object sender, EventArgs e)
@@ -106,6 +159,68 @@ namespace PicturePDF
 		private void pageView_ZoomFactorChanged(object sender, EventArgs e)
 		{
 			zoomLabel.Text = ((int)(pageView.ZoomFactor * 100)).ToString() + "%";
+		}
+
+		private void nextFileButton_Click(object sender, EventArgs e)
+		{
+			if (currentPath == null)
+			{
+				return;
+			}
+
+			bool done = false;
+			foreach (string path in CurrentDirectoryImages())
+			{
+				if (done)
+				{
+					OpenPrimaryFile(path);
+					return;
+				}
+
+				done = path == currentPath;
+			}
+
+			// Still here? Pick the first one.
+			OpenPrimaryFile(CurrentDirectoryImages().First());
+		}
+
+		private void previousFileButton_Click(object sender, EventArgs e)
+		{
+			if (currentPath == null)
+			{
+				return;
+			}
+
+			string last = null;
+			foreach (string path in CurrentDirectoryImages())
+			{
+				if (path == currentPath)
+				{
+					OpenPrimaryFile(last ?? CurrentDirectoryImages().Last());
+					return;
+				}
+
+				last = path;
+			}
+
+			OpenPrimaryFile(last);
+		}
+
+		private IEnumerable<string> CurrentDirectoryImages()
+		{
+			if (currentPath == null)
+			{
+				yield break;
+			}
+
+			foreach (var name in Directory.EnumerateFiles(Path.GetDirectoryName(currentPath)))
+			{
+				string ext = Path.GetExtension(name);
+				if (ext == ".pdf" || ext == ".png" || ext == ".jpg" || ext == ".bmp")
+				{
+					yield return name;
+				}
+			}
 		}
 	}
 }

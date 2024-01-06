@@ -109,6 +109,7 @@ namespace PicturePDF
 			previousFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			resources.ApplyResources(previousFileButton, "previousFileButton");
 			previousFileButton.Name = "previousFileButton";
+			previousFileButton.Click += previousFileButton_Click;
 			// 
 			// openButton
 			// 
@@ -122,6 +123,7 @@ namespace PicturePDF
 			nextFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			resources.ApplyResources(nextFileButton, "nextFileButton");
 			nextFileButton.Name = "nextFileButton";
+			nextFileButton.Click += nextFileButton_Click;
 			// 
 			// pdfGeneratingButton
 			// 
