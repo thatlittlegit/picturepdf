@@ -1,284 +1,240 @@
 namespace PicturePDF
 {
-    partial class MainWindow
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class MainWindow
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.scaleBox = new System.Windows.Forms.GroupBox();
-            this.ScaleControl = new System.Windows.Forms.NumericUpDown();
-            this.Xlabel = new System.Windows.Forms.Label();
-            this.xBar = new System.Windows.Forms.TrackBar();
-            this.Workspace = new System.Windows.Forms.Panel();
-            this.PictureBox = new System.Windows.Forms.PictureBox();
-            this.Page = new System.Windows.Forms.Panel();
-            this.Ylabel = new System.Windows.Forms.Label();
-            this.yBar = new System.Windows.Forms.TrackBar();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.previousFileButton = new System.Windows.Forms.ToolStripButton();
-            this.nextFileButton = new System.Windows.Forms.ToolStripButton();
-            this.pdfGeneratingButton = new System.Windows.Forms.ToolStripButton();
-            this.openButton = new System.Windows.Forms.ToolStripButton();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.scaleBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ScaleControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xBar)).BeginInit();
-            this.Workspace.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yBar)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.BottomToolStripPanel
-            // 
-            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.statusStrip1);
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.tableLayoutPanel1);
-            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
-            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            // 
-            // toolStripContainer1.TopToolStripPanel
-            // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
-            // 
-            // statusStrip1
-            // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileLabel});
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // FileLabel
-            // 
-            this.FileLabel.Name = "FileLabel";
-            resources.ApplyResources(this.FileLabel, "FileLabel");
-            // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.scaleBox, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Xlabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.xBar, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Workspace, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Ylabel, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.yBar, 3, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // scaleBox
-            // 
-            resources.ApplyResources(this.scaleBox, "scaleBox");
-            this.scaleBox.Controls.Add(this.ScaleControl);
-            this.scaleBox.Name = "scaleBox";
-            this.scaleBox.TabStop = false;
-            // 
-            // ScaleControl
-            // 
-            resources.ApplyResources(this.ScaleControl, "ScaleControl");
-            this.ScaleControl.DecimalPlaces = 1;
-            this.ScaleControl.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.ScaleControl.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.ScaleControl.Name = "ScaleControl";
-            this.ScaleControl.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.ScaleControl.ValueChanged += new System.EventHandler(this.ScaleChanged);
-            // 
-            // Xlabel
-            // 
-            resources.ApplyResources(this.Xlabel, "Xlabel");
-            this.Xlabel.Name = "Xlabel";
-            // 
-            // xBar
-            // 
-            resources.ApplyResources(this.xBar, "xBar");
-            this.xBar.Maximum = 500;
-            this.xBar.Minimum = -500;
-            this.xBar.Name = "xBar";
-            this.xBar.TickFrequency = 20;
-            this.xBar.ValueChanged += new System.EventHandler(this.UpdateXOffset);
-            // 
-            // Workspace
-            // 
-            resources.ApplyResources(this.Workspace, "Workspace");
-            this.Workspace.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Workspace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.Workspace, 6);
-            this.Workspace.Controls.Add(this.PictureBox);
-            this.Workspace.Controls.Add(this.Page);
-            this.Workspace.Name = "Workspace";
-            // 
-            // PictureBox
-            // 
-            this.PictureBox.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.PictureBox, "PictureBox");
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.TabStop = false;
-            // 
-            // Page
-            // 
-            this.Page.BackColor = System.Drawing.Color.White;
-            this.Page.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.Page, "Page");
-            this.Page.Name = "Page";
-            // 
-            // Ylabel
-            // 
-            resources.ApplyResources(this.Ylabel, "Ylabel");
-            this.Ylabel.Name = "Ylabel";
-            // 
-            // yBar
-            // 
-            resources.ApplyResources(this.yBar, "yBar");
-            this.yBar.Maximum = 500;
-            this.yBar.Minimum = -500;
-            this.yBar.Name = "yBar";
-            this.yBar.TickFrequency = 40;
-            this.yBar.ValueChanged += new System.EventHandler(this.UpdateYOffset);
-            // 
-            // toolStrip1
-            // 
-            resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.previousFileButton,
-            this.nextFileButton,
-            this.pdfGeneratingButton,
-            this.openButton});
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Stretch = true;
-            // 
-            // previousFileButton
-            // 
-            this.previousFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.previousFileButton, "previousFileButton");
-            this.previousFileButton.Name = "previousFileButton";
-            // 
-            // nextFileButton
-            // 
-            this.nextFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.nextFileButton, "nextFileButton");
-            this.nextFileButton.Name = "nextFileButton";
-            // 
-            // pdfGeneratingButton
-            // 
-            this.pdfGeneratingButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.pdfGeneratingButton, "pdfGeneratingButton");
-            this.pdfGeneratingButton.Name = "pdfGeneratingButton";
-            this.pdfGeneratingButton.Click += new System.EventHandler(this.MakePdfButtonPressed);
-            // 
-            // openButton
-            // 
-            this.openButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.openButton, "openButton");
-            this.openButton.Name = "openButton";
-            this.openButton.Click += new System.EventHandler(this.OpenImageDialog);
-            // 
-            // MainWindow
-            // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.toolStripContainer1);
-            this.DoubleBuffered = true;
-            this.Name = "MainWindow";
-            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.UpdateAll);
-            this.Resize += new System.EventHandler(this.UpdateAll);
-            this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
-            this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
-            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.scaleBox.ResumeLayout(false);
-            this.scaleBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ScaleControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xBar)).EndInit();
-            this.Workspace.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yBar)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			var resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+			toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+			statusStrip1 = new System.Windows.Forms.StatusStrip();
+			FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			scaleBox = new System.Windows.Forms.GroupBox();
+			ScaleControl = new System.Windows.Forms.NumericUpDown();
+			Xlabel = new System.Windows.Forms.Label();
+			xBar = new System.Windows.Forms.TrackBar();
+			Ylabel = new System.Windows.Forms.Label();
+			yBar = new System.Windows.Forms.TrackBar();
+			pageView1 = new PageView();
+			toolStrip1 = new System.Windows.Forms.ToolStrip();
+			previousFileButton = new System.Windows.Forms.ToolStripButton();
+			nextFileButton = new System.Windows.Forms.ToolStripButton();
+			pdfGeneratingButton = new System.Windows.Forms.ToolStripButton();
+			openButton = new System.Windows.Forms.ToolStripButton();
+			openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+			toolStripContainer1.ContentPanel.SuspendLayout();
+			toolStripContainer1.TopToolStripPanel.SuspendLayout();
+			toolStripContainer1.SuspendLayout();
+			statusStrip1.SuspendLayout();
+			tableLayoutPanel1.SuspendLayout();
+			scaleBox.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)ScaleControl).BeginInit();
+			((System.ComponentModel.ISupportInitialize)xBar).BeginInit();
+			((System.ComponentModel.ISupportInitialize)yBar).BeginInit();
+			toolStrip1.SuspendLayout();
+			SuspendLayout();
+			// 
+			// toolStripContainer1
+			// 
+			// 
+			// toolStripContainer1.BottomToolStripPanel
+			// 
+			toolStripContainer1.BottomToolStripPanel.Controls.Add(statusStrip1);
+			// 
+			// toolStripContainer1.ContentPanel
+			// 
+			toolStripContainer1.ContentPanel.Controls.Add(tableLayoutPanel1);
+			resources.ApplyResources(toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+			resources.ApplyResources(toolStripContainer1, "toolStripContainer1");
+			toolStripContainer1.Name = "toolStripContainer1";
+			// 
+			// toolStripContainer1.TopToolStripPanel
+			// 
+			toolStripContainer1.TopToolStripPanel.Controls.Add(toolStrip1);
+			// 
+			// statusStrip1
+			// 
+			resources.ApplyResources(statusStrip1, "statusStrip1");
+			statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { FileLabel });
+			statusStrip1.Name = "statusStrip1";
+			// 
+			// FileLabel
+			// 
+			FileLabel.Name = "FileLabel";
+			resources.ApplyResources(FileLabel, "FileLabel");
+			// 
+			// tableLayoutPanel1
+			// 
+			resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
+			tableLayoutPanel1.Controls.Add(scaleBox, 4, 0);
+			tableLayoutPanel1.Controls.Add(Xlabel, 0, 0);
+			tableLayoutPanel1.Controls.Add(xBar, 1, 0);
+			tableLayoutPanel1.Controls.Add(Ylabel, 2, 0);
+			tableLayoutPanel1.Controls.Add(yBar, 3, 0);
+			tableLayoutPanel1.Controls.Add(pageView1, 0, 1);
+			tableLayoutPanel1.Name = "tableLayoutPanel1";
+			// 
+			// scaleBox
+			// 
+			resources.ApplyResources(scaleBox, "scaleBox");
+			scaleBox.Controls.Add(ScaleControl);
+			scaleBox.Name = "scaleBox";
+			scaleBox.TabStop = false;
+			// 
+			// ScaleControl
+			// 
+			resources.ApplyResources(ScaleControl, "ScaleControl");
+			ScaleControl.DecimalPlaces = 1;
+			ScaleControl.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+			ScaleControl.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
+			ScaleControl.Name = "ScaleControl";
+			ScaleControl.Value = new decimal(new int[] { 1, 0, 0, 0 });
+			ScaleControl.ValueChanged += ScaleChanged;
+			// 
+			// Xlabel
+			// 
+			resources.ApplyResources(Xlabel, "Xlabel");
+			Xlabel.Name = "Xlabel";
+			// 
+			// xBar
+			// 
+			resources.ApplyResources(xBar, "xBar");
+			xBar.Maximum = 500;
+			xBar.Minimum = -500;
+			xBar.Name = "xBar";
+			xBar.TickFrequency = 20;
+			xBar.ValueChanged += UpdateXOffset;
+			// 
+			// Ylabel
+			// 
+			resources.ApplyResources(Ylabel, "Ylabel");
+			Ylabel.Name = "Ylabel";
+			// 
+			// yBar
+			// 
+			resources.ApplyResources(yBar, "yBar");
+			yBar.Maximum = 500;
+			yBar.Minimum = -500;
+			yBar.Name = "yBar";
+			yBar.TickFrequency = 40;
+			yBar.ValueChanged += UpdateYOffset;
+			// 
+			// pageView1
+			// 
+			tableLayoutPanel1.SetColumnSpan(pageView1, 6);
+			resources.ApplyResources(pageView1, "pageView1");
+			pageView1.Name = "pageView1";
+			// 
+			// toolStrip1
+			// 
+			resources.ApplyResources(toolStrip1, "toolStrip1");
+			toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { previousFileButton, nextFileButton, pdfGeneratingButton, openButton });
+			toolStrip1.Name = "toolStrip1";
+			toolStrip1.Stretch = true;
+			// 
+			// previousFileButton
+			// 
+			previousFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			resources.ApplyResources(previousFileButton, "previousFileButton");
+			previousFileButton.Name = "previousFileButton";
+			// 
+			// nextFileButton
+			// 
+			nextFileButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			resources.ApplyResources(nextFileButton, "nextFileButton");
+			nextFileButton.Name = "nextFileButton";
+			// 
+			// pdfGeneratingButton
+			// 
+			pdfGeneratingButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			resources.ApplyResources(pdfGeneratingButton, "pdfGeneratingButton");
+			pdfGeneratingButton.Name = "pdfGeneratingButton";
+			pdfGeneratingButton.Click += MakePdfButtonPressed;
+			// 
+			// openButton
+			// 
+			openButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+			openButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			resources.ApplyResources(openButton, "openButton");
+			openButton.Name = "openButton";
+			openButton.Click += OpenImageDialog;
+			// 
+			// MainWindow
+			// 
+			resources.ApplyResources(this, "$this");
+			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			Controls.Add(toolStripContainer1);
+			DoubleBuffered = true;
+			Name = "MainWindow";
+			Layout += UpdateAll;
+			Resize += UpdateAll;
+			toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
+			toolStripContainer1.BottomToolStripPanel.PerformLayout();
+			toolStripContainer1.ContentPanel.ResumeLayout(false);
+			toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+			toolStripContainer1.TopToolStripPanel.PerformLayout();
+			toolStripContainer1.ResumeLayout(false);
+			toolStripContainer1.PerformLayout();
+			statusStrip1.ResumeLayout(false);
+			statusStrip1.PerformLayout();
+			tableLayoutPanel1.ResumeLayout(false);
+			tableLayoutPanel1.PerformLayout();
+			scaleBox.ResumeLayout(false);
+			scaleBox.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)ScaleControl).EndInit();
+			((System.ComponentModel.ISupportInitialize)xBar).EndInit();
+			((System.ComponentModel.ISupportInitialize)yBar).EndInit();
+			toolStrip1.ResumeLayout(false);
+			toolStrip1.PerformLayout();
+			ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label Xlabel;
-        private System.Windows.Forms.TrackBar xBar;
-        private System.Windows.Forms.TrackBar yBar;
-        private System.Windows.Forms.Label Ylabel;
-        private System.Windows.Forms.Panel Workspace;
-        private System.Windows.Forms.PictureBox PictureBox;
-        private System.Windows.Forms.GroupBox scaleBox;
-        private System.Windows.Forms.NumericUpDown ScaleControl;
-        private System.Windows.Forms.Panel Page;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton previousFileButton;
-        private System.Windows.Forms.ToolStripButton nextFileButton;
-        private System.Windows.Forms.ToolStripButton pdfGeneratingButton;
-        private System.Windows.Forms.ToolStripButton openButton;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel FileLabel;
+		private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.Label Xlabel;
+		private System.Windows.Forms.TrackBar xBar;
+		private System.Windows.Forms.TrackBar yBar;
+		private System.Windows.Forms.Label Ylabel;
+		private System.Windows.Forms.GroupBox scaleBox;
+		private System.Windows.Forms.NumericUpDown ScaleControl;
+		private System.Windows.Forms.ToolStrip toolStrip1;
+		private System.Windows.Forms.ToolStripButton previousFileButton;
+		private System.Windows.Forms.ToolStripButton nextFileButton;
+		private System.Windows.Forms.ToolStripButton pdfGeneratingButton;
+		private System.Windows.Forms.ToolStripButton openButton;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel FileLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private PageView pageView1;
 	}
 }
 
