@@ -9,6 +9,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PicturePDF
 {
@@ -120,6 +121,20 @@ namespace PicturePDF
 			}
 			e.Graphics.Restore(state);
 
+			if (grabbing != null)
+			{
+				Pen dashed = new Pen(new SolidBrush(Color.Gray), 4);
+				dashed.DashStyle = DashStyle.Dot;
+
+				RectangleF border = new RectangleF
+				{
+					X = grabbing.X * scale,
+					Y = grabbing.Y * scale,
+					Width = grabbing.Width * scale,
+					Height = grabbing.Height * scale,
+				};
+				e.Graphics.DrawRectangle(dashed, Rectangle.Round(border));
+			}
 			e.Graphics.DrawRectangle(outline, Rectangle.Round(area));
 		}
 
@@ -154,6 +169,7 @@ namespace PicturePDF
 		{
 			base.OnMouseUp(e);
 			grabbing = null;
+			Invalidate();
 		}
 
 		protected override void OnKeyDown(KeyEventArgs e)
