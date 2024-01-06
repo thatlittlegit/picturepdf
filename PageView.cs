@@ -125,9 +125,7 @@ namespace PicturePDF
 		{
 			base.OnMouseMove(e);
 
-			float cmX = e.X / PIXELS_PER_CENTIMETRE;
-			float cmY = e.Y / PIXELS_PER_CENTIMETRE;
-
+			var (cmX, cmY) = XYtoCentimetre(e.X, e.Y);
 			grabbing?.Move(cmX - grabXOffset, cmY - grabYOffset);
 		}
 
@@ -135,12 +133,19 @@ namespace PicturePDF
 		{
 			base.OnMouseDown(e);
 
-			float cmX = e.X / PIXELS_PER_CENTIMETRE;
-			float cmY = e.Y / PIXELS_PER_CENTIMETRE;
+			var (cmX, cmY) = XYtoCentimetre(e.X, e.Y);
 
 			grabbing = Model?.ElementAtPosition(cmX, cmY);
 			grabXOffset = grabbing != null ? cmX - grabbing.X : 0.0f;
 			grabYOffset = grabbing != null ? cmY - grabbing.Y : 0.0f;
+		}
+
+		private Tuple<float, float> XYtoCentimetre(float x, float y)
+		{
+			float nx = (x + HorizontalScroll.Value) / (PIXELS_PER_CENTIMETRE * ZoomFactor);
+			float ny = (y + VerticalScroll.Value) / (PIXELS_PER_CENTIMETRE * ZoomFactor);
+
+			return new Tuple<float, float>(nx, ny);
 		}
 
 		protected override void OnMouseUp(MouseEventArgs e)
