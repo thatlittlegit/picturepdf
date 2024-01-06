@@ -9,6 +9,7 @@ namespace PicturePDF
 	public partial class MainWindow : Form
 	{
 		private PageModel page;
+		private string currentPath;
 
 		private IDictionary<string, int> zoomMenuItems
 			= new Dictionary<string, int>();
@@ -30,22 +31,37 @@ namespace PicturePDF
 
 		private void addAdditionalImageButton_Click(object sender, EventArgs e)
 		{
-			OpenImageDialog();
+			var (stream, _) = OpenFileDialog();
+			if (stream != null)
+			{
+				AddImage(stream);
+			}
 		}
 
 		private void openButton_Click(object sender, EventArgs e)
 		{
+			var (stream, name) = OpenFileDialog();
+			if (stream == null)
+			{
+				return;
+			}
+
 			ResetPage();
-			OpenImageDialog();
+			AddImage(stream);
+
+			currentPath = name;
+			FileLabel.Text = currentPath;
+			Text = currentPath;
 		}
 
-		private void OpenImageDialog()
+		private (Stream, string) OpenFileDialog()
 		{
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
-				FileLabel.Text = openFileDialog.FileName;
-				AddImage(openFileDialog.OpenFile());
+				return (openFileDialog.OpenFile(), openFileDialog.FileName);
 			}
+
+			return (null, null);
 		}
 
 		private void AddImage(Stream stream)
