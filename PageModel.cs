@@ -29,6 +29,7 @@ namespace PicturePDF
 		{
 			image.Changed += (sender, args) => ImageChanged?.Invoke(this, image);
 			elements.Add(image);
+			ImageChanged?.Invoke(this, image);
 		}
 
 		public IEnumerable<ImageModel> Elements()
@@ -41,7 +42,7 @@ namespace PicturePDF
 
 		public ImageModel ElementAtPosition(float x, float y)
 		{
-			foreach (var element in elements)
+			foreach (var element in elements.Reverse())
 			{
 				bool beyondLeftEdge = element.X <= x;
 				bool afterTopEdge = element.Y <= y;
