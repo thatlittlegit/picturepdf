@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PicturePDF
@@ -70,9 +71,25 @@ namespace PicturePDF
 		private void MakePdfButtonPressed(object sender, EventArgs e)
 		{
 			if (Image == null) return;
-			System.IO.Stream stream = new System.IO.MemoryStream();
+
+			SaveFileDialog dialog = new SaveFileDialog
+			{
+				AddExtension = true,
+				DefaultExt = "pdf",
+				Filter = "Portable Document Format|*.pdf",
+				Title = "Save PDF to...",
+			};
+			dialog.ShowDialog(this);
+			Stream output = dialog.OpenFile();
+
+			if (output == null)
+			{
+				return;
+			}
+
+			Stream stream = new MemoryStream();
 			Image.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
-			Program.MakePdf(stream, (xBar.Value / Image.HorizontalResolution, yBar.Value / Image.VerticalResolution));
+			Program.MakePdf(stream, output, (xBar.Value / Image.HorizontalResolution, yBar.Value / Image.VerticalResolution));
 		}
 
 		private void ScaleChanged()
