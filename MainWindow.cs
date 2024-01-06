@@ -35,17 +35,11 @@ namespace PicturePDF
 
 		private void UpdateAll(object sender, LayoutEventArgs e) => UpdateAll();
 
-		private void UpdateXOffset(object sender, EventArgs e) => UpdateXOffset();
-
-		private void UpdateYOffset(object sender, EventArgs e) => UpdateYOffset();
-
 		#endregion Event implementations
 
 		internal void UpdateAll()
 		{
 			UpdatePage();
-			UpdateXOffset();
-			UpdateYOffset();
 		}
 
 		private void UpdatePage() { }/*
@@ -72,11 +66,6 @@ namespace PicturePDF
 
 			image = new ImageModel(stream);
 			page.AddElement(image);
-
-			xBar.Minimum = (int)-image.Width;
-			xBar.Maximum = (int)+image.Width;
-			yBar.Minimum = (int)-image.Height;
-			yBar.Maximum = (int)+image.Height;
 		}
 
 		private void MakePdfButtonPressed(object sender, EventArgs e)
@@ -101,9 +90,6 @@ namespace PicturePDF
 			new PdfSharpExporter().Export(page, output);
 		}
 
-		private void UpdateXOffset() => image?.Move(xBar.Value, -1);
-		private void UpdateYOffset() => image?.Move(-1, yBar.Value);
-
 		private void zoomLabel_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
 			pageView1.ZoomFactor = zoomMenuItems[e.ClickedItem.Text] / 100.0f;
@@ -111,7 +97,7 @@ namespace PicturePDF
 
 		private void pageView1_ZoomFactorChanged(object sender, EventArgs e)
 		{
-			zoomLabel.Text = ((int) (pageView1.ZoomFactor * 100)).ToString() + "%";
+			zoomLabel.Text = ((int)(pageView1.ZoomFactor * 100)).ToString() + "%";
 		}
 	}
 }

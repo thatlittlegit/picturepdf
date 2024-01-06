@@ -33,27 +33,18 @@ namespace PicturePDF
 			statusStrip1 = new System.Windows.Forms.StatusStrip();
 			FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			zoomLabel = new System.Windows.Forms.ToolStripDropDownButton();
-			tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			scaleBox = new System.Windows.Forms.GroupBox();
-			Xlabel = new System.Windows.Forms.Label();
-			xBar = new System.Windows.Forms.TrackBar();
-			Ylabel = new System.Windows.Forms.Label();
-			yBar = new System.Windows.Forms.TrackBar();
-			pageView1 = new PageView();
 			toolStrip1 = new System.Windows.Forms.ToolStrip();
 			previousFileButton = new System.Windows.Forms.ToolStripButton();
 			nextFileButton = new System.Windows.Forms.ToolStripButton();
 			pdfGeneratingButton = new System.Windows.Forms.ToolStripButton();
 			openButton = new System.Windows.Forms.ToolStripButton();
 			openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			pageView1 = new PageView();
 			toolStripContainer1.BottomToolStripPanel.SuspendLayout();
 			toolStripContainer1.ContentPanel.SuspendLayout();
 			toolStripContainer1.TopToolStripPanel.SuspendLayout();
 			toolStripContainer1.SuspendLayout();
 			statusStrip1.SuspendLayout();
-			tableLayoutPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)xBar).BeginInit();
-			((System.ComponentModel.ISupportInitialize)yBar).BeginInit();
 			toolStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -66,7 +57,7 @@ namespace PicturePDF
 			// 
 			// toolStripContainer1.ContentPanel
 			// 
-			toolStripContainer1.ContentPanel.Controls.Add(tableLayoutPanel1);
+			toolStripContainer1.ContentPanel.Controls.Add(pageView1);
 			resources.ApplyResources(toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
 			resources.ApplyResources(toolStripContainer1, "toolStripContainer1");
 			toolStripContainer1.Name = "toolStripContainer1";
@@ -94,60 +85,6 @@ namespace PicturePDF
 			zoomLabel.ShowDropDownArrow = false;
 			resources.ApplyResources(zoomLabel, "zoomLabel");
 			zoomLabel.DropDownItemClicked += zoomLabel_DropDownItemClicked;
-			// 
-			// tableLayoutPanel1
-			// 
-			resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
-			tableLayoutPanel1.Controls.Add(scaleBox, 4, 0);
-			tableLayoutPanel1.Controls.Add(Xlabel, 0, 0);
-			tableLayoutPanel1.Controls.Add(xBar, 1, 0);
-			tableLayoutPanel1.Controls.Add(Ylabel, 2, 0);
-			tableLayoutPanel1.Controls.Add(yBar, 3, 0);
-			tableLayoutPanel1.Controls.Add(pageView1, 0, 1);
-			tableLayoutPanel1.Name = "tableLayoutPanel1";
-			// 
-			// scaleBox
-			// 
-			resources.ApplyResources(scaleBox, "scaleBox");
-			scaleBox.Name = "scaleBox";
-			scaleBox.TabStop = false;
-			// 
-			// Xlabel
-			// 
-			resources.ApplyResources(Xlabel, "Xlabel");
-			Xlabel.Name = "Xlabel";
-			// 
-			// xBar
-			// 
-			resources.ApplyResources(xBar, "xBar");
-			xBar.Maximum = 500;
-			xBar.Minimum = -500;
-			xBar.Name = "xBar";
-			xBar.TickFrequency = 20;
-			xBar.ValueChanged += UpdateXOffset;
-			// 
-			// Ylabel
-			// 
-			resources.ApplyResources(Ylabel, "Ylabel");
-			Ylabel.Name = "Ylabel";
-			// 
-			// yBar
-			// 
-			resources.ApplyResources(yBar, "yBar");
-			yBar.Maximum = 500;
-			yBar.Minimum = -500;
-			yBar.Name = "yBar";
-			yBar.TickFrequency = 40;
-			yBar.ValueChanged += UpdateYOffset;
-			// 
-			// pageView1
-			// 
-			resources.ApplyResources(pageView1, "pageView1");
-			tableLayoutPanel1.SetColumnSpan(pageView1, 6);
-			pageView1.Model = null;
-			pageView1.Name = "pageView1";
-			pageView1.ZoomFactor = 1F;
-			pageView1.ZoomFactorChanged += pageView1_ZoomFactorChanged;
 			// 
 			// toolStrip1
 			// 
@@ -184,6 +121,13 @@ namespace PicturePDF
 			openButton.Name = "openButton";
 			openButton.Click += OpenImageDialog;
 			// 
+			// pageView1
+			// 
+			resources.ApplyResources(pageView1, "pageView1");
+			pageView1.Model = null;
+			pageView1.Name = "pageView1";
+			pageView1.ZoomFactor = 1F;
+			// 
 			// MainWindow
 			// 
 			resources.ApplyResources(this, "$this");
@@ -202,10 +146,6 @@ namespace PicturePDF
 			toolStripContainer1.PerformLayout();
 			statusStrip1.ResumeLayout(false);
 			statusStrip1.PerformLayout();
-			tableLayoutPanel1.ResumeLayout(false);
-			tableLayoutPanel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)xBar).EndInit();
-			((System.ComponentModel.ISupportInitialize)yBar).EndInit();
 			toolStrip1.ResumeLayout(false);
 			toolStrip1.PerformLayout();
 			ResumeLayout(false);
@@ -214,12 +154,6 @@ namespace PicturePDF
 		#endregion
 
 		private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private System.Windows.Forms.Label Xlabel;
-		private System.Windows.Forms.TrackBar xBar;
-		private System.Windows.Forms.TrackBar yBar;
-		private System.Windows.Forms.Label Ylabel;
-		private System.Windows.Forms.GroupBox scaleBox;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton previousFileButton;
 		private System.Windows.Forms.ToolStripButton nextFileButton;
@@ -228,8 +162,8 @@ namespace PicturePDF
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel FileLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
-		private PageView pageView1;
 		private System.Windows.Forms.ToolStripDropDownButton zoomLabel;
+		private PageView pageView1;
 	}
 }
 

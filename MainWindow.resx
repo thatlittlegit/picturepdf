@@ -171,154 +171,6 @@
   <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="scaleBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="scaleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 3</value>
-  </data>
-  <data name="scaleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="scaleBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;scaleBox.Name" xml:space="preserve">
-    <value>scaleBox</value>
-  </data>
-  <data name="&gt;&gt;scaleBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;scaleBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;scaleBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Xlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Xlabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Xlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Xlabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Xlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 79</value>
-  </data>
-  <data name="Xlabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Xlabel.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="Xlabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Xlabel.Name" xml:space="preserve">
-    <value>Xlabel</value>
-  </data>
-  <data name="&gt;&gt;Xlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Xlabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Xlabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="xBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 5</value>
-  </data>
-  <data name="xBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="xBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 69</value>
-  </data>
-  <data name="xBar.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;xBar.Name" xml:space="preserve">
-    <value>xBar</value>
-  </data>
-  <data name="&gt;&gt;xBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;xBar.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;xBar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Ylabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Ylabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Ylabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 0</value>
-  </data>
-  <data name="Ylabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="Ylabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 79</value>
-  </data>
-  <data name="Ylabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Ylabel.Text" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="Ylabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;Ylabel.Name" xml:space="preserve">
-    <value>Ylabel</value>
-  </data>
-  <data name="&gt;&gt;Ylabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Ylabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;Ylabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="yBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 5</value>
-  </data>
-  <data name="yBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="yBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 69</value>
-  </data>
-  <data name="yBar.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;yBar.Name" xml:space="preserve">
-    <value>yBar</value>
-  </data>
-  <data name="&gt;&gt;yBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yBar.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;yBar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="pageView1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -326,13 +178,13 @@
     <value>Fill</value>
   </data>
   <data name="pageView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 82</value>
+    <value>0, 0</value>
   </data>
   <data name="pageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>972, 545</value>
+    <value>978, 630</value>
   </data>
   <data name="pageView1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;pageView1.Name" xml:space="preserve">
     <value>pageView1</value>
@@ -341,44 +193,12 @@
     <value>PicturePDF.PageView, PicturePDF, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pageView1.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;pageView1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
-  </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>978, 630</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pageView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="scaleBox" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Xlabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="xBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Ylabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="yBar" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="pageView1" Row="1" RowSpan="1" Column="0" ColumnSpan="6" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100,Absolute,25" /&gt;&lt;Rows Styles="AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolStripContainer1.ContentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -474,14 +294,14 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHsSURBVDhPjZPPSxRhGMe1Y8hqYOIho3+gk7J06uhJMBCP
-        RhcjwzqkrSnKIgSeZVtWMCwI7BDdOuQpQdglSxKsiPUXyu6Ms7uzu/NrZ2Z39dvzvOKw7s5SD3zgfZnn
+        RhcjwzqkrSnKIgSeZVtWMCwI7BDdOuQpQXYhSxKsiPUXyu6Ms7uzu/NrZ2Z39dvzvOKw7s5SD3zgfZnn
         +fA8z8y01MQNopcI/oNbxBWiIXpLpVIxHo+fVqtV+OE4DiKRyCLl+kqCXGxqGrSXL2B8WYNlWdDoXigU
         oCiKkMiyjGg02iBpJYKcYBs6tPAErO3vsG0bhmGgWCwik8kIAXUJ0zQRi8UuJCI8geu6yIfGoK+uCAEX
         6LqObDZ7aRyGa0Q1hSeoVCrIhydhfFwVZ577YpRcLic6kSSpuYDJPBpBLjQuzrUS7oT3oapqc4FzsAfp
         /hBOHj+A/fvnJQmPwzthUVOB/PwJ1Ncx2Pu7SI+RZC8pksvlstgPSxhfgavIOBwegJNOoZT8g9TTh0je
         uY3De/04Hh1BevoZ1A/vRTe+gtTcFNLzMyh8/oTsuzfQNtZh/tqBtDCPo/FRpGZDUN4uNwo2brZfW+oM
         hHeHB+HmzxfE8OwMt8/Yyglc2gGfPcFWd8fdre72hfWujh/6t69ecb2kHk+weT2wvNnZtvYqcDWcSCTO
-        6gXNoNxTIaiJPno9Fj/wK6iFc+hzNqiG/14veog+gq3/AxW39PwF8T9uLjFipPcAAAAASUVORK5CYII=
+        6gXNoNxTIaiJPno9Fj/wK6iFc+hzNqiG/14veog+gq3/AxW39PwF1ZpuHHAVSeEAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pdfGeneratingButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -493,16 +313,16 @@
   <data name="openButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIRSURBVDhP3Y/NaxNBHIbn4L03/wQP1tSP2Kh48CKIIHgR
-        PagnEbQElAgFRdAe0kaESGn0IKKIpYKt9RNBBBdPja3tbpu12SZp7bY1dIPNfn9kd7Ovs+0qjQevgsM8
-        zMzhed/fkP9kzb6Nc+LrY+7SH5Tf7Z+vPO/YOv8s3tbCh3gbwxzaEumE5J8knCBoAgjoDtm4e3YNK0xX
-        Y3nstPOL6uQlWxxLicKrPScjnRD+RacS+DaclSzMhX6Yi49giSMIPJlmGQh8naJuvL06JElqCKMJPtIJ
-        KQ3t1pquSuUcjMoAtK89WBvvQm0iCbmQhjxzEzJ3DXW2m5Kik0koje7VI50GDHe6nrUKmc+hPpWB9OkK
-        LOkzbdWi9vBUfk8Qfo8d3mlHejjBPnf9/02HYgG+uS76lgCnmoO9nIb1rRtm+QIM4Qx8owh2cHNALtEI
-        fAu+locnv4f7YwSN1QdUvA1r8TqsShLm3FkYs8ehFw7D1zmwdzYF5O8nnKarwV17g4Y0SFvvwl6irQth
-        63kYxVPQ+aPQpg9CndoFT/vSGhA+Alem8mM43/thiz1UTsEsnaPyCdp6BBp3AOpkB5SJbTRgvDVg7las
-        aim8wjBPm0b5IfTSPehCFnqxFxp/A1rhKtSZFFQuCZW9iI8vMwGfjSuRTojQ235ZyOwY4vu219hMzP4r
-        fTF7OhNThXT7QKT/00XITyQm5s8xeGXOAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIRSURBVDhP3Y/LaxNBHMfn4L03/wQP1tRH2qh48CKIIHgR
+        PagnEbQElAgFRdAe0kSESGn0IGIRSwVbW3wgiEjw1Nja7rZZm22S1qatoRts9v3Ivr7Otqs0HrwKDvNh
+        Zg6f7/c35D9Z82+jbPX1SXvlD8rvDi1WXnbsXHwRbWvhQ7Qtlzu6I9QJyT+LWb7vAfDpDti6O2Yda7nu
+        5urEOesXtemrZnUiUeVfHTgT6oRw412S75qw1jLQl/qhLw/CqI7Cd0SapcF3VYq89XYaEAShyY/FuFAn
+        pDS8X/FsmcpZaJUBKF97sTHZjfpUHGIhCXHuDkT2JhpMDyVBJxNQGutUQ50GjHTZjrEOkcuiMZOG8Ok6
+        DOEzbVXC9uCUfk8QfI8Z2WuGejDBQXvz/55FMQBX3xRdg4dVy8JcTcL41gO9fBkafx6uVgQztD0gG2v6
+        rgFXycMR38P+MYrm+mMq3oOxfAtGJQ594QK0+VNQC8fgqiyY+9sC8o9ilmcrsDfeoCkM0dYHMFdo61LQ
+        egla8SxU7gSU2SOQZ/bBUb60BgQP3xap/BTW936Y1V4qJ6CXLlL5NG09DoU9DHm6A9LULhow2RqwcDdS
+        MyROyuWee1r5CdTSQ6h8BmqxDwp3G0rhBuS5BGQ2Dpm5go/jKZ/LRKVQJ4Tva7/Gp/cMc6nddSYdMf9K
+        KmLOpiMyn2wfCPV/ugj5CSG85szcFWX8AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="openButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
