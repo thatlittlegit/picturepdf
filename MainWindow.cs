@@ -29,27 +29,6 @@ namespace PicturePDF
 			zoomLabel.DropDownItems.AddRange(labels.ToArray());
 		}
 
-		#region Event implementations
-
-		private void UpdateAll(object sender, EventArgs e) => UpdateAll();
-
-		private void UpdateAll(object sender, LayoutEventArgs e) => UpdateAll();
-
-		#endregion Event implementations
-
-		internal void UpdateAll()
-		{
-			UpdatePage();
-		}
-
-		private void UpdatePage() { }/*
-			Page.Size = Image == null
-				? new Size(0, 0)
-				: new Size(
-					(int)((Image.HorizontalResolution * 5.47f) * (float)ScaleControl.Value),
-					(int)((Image.VerticalResolution * 8.5f) * (float)ScaleControl.Value)
-					);*/
-
 		private void OpenImageDialog(object sender, EventArgs e)
 		{
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -62,7 +41,7 @@ namespace PicturePDF
 		public void LoadImage(Stream stream)
 		{
 			page = new PageModel(8.5f * 2.54f, 11f * 2.54f);
-			pageView1.Model = page;
+			pageView.Model = page;
 
 			image = new ImageModel(stream);
 			page.AddElement(image);
@@ -92,12 +71,12 @@ namespace PicturePDF
 
 		private void zoomLabel_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
 		{
-			pageView1.ZoomFactor = zoomMenuItems[e.ClickedItem.Text] / 100.0f;
+			pageView.ZoomFactor = zoomMenuItems[e.ClickedItem.Text] / 100.0f;
 		}
 
-		private void pageView1_ZoomFactorChanged(object sender, EventArgs e)
+		private void pageView_ZoomFactorChanged(object sender, EventArgs e)
 		{
-			zoomLabel.Text = ((int)(pageView1.ZoomFactor * 100)).ToString() + "%";
+			zoomLabel.Text = ((int)(pageView.ZoomFactor * 100)).ToString() + "%";
 		}
 	}
 }

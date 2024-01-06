@@ -39,7 +39,7 @@ namespace PicturePDF
 			pdfGeneratingButton = new System.Windows.Forms.ToolStripButton();
 			openButton = new System.Windows.Forms.ToolStripButton();
 			openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			pageView1 = new PageView();
+			pageView = new PageView();
 			toolStripContainer1.BottomToolStripPanel.SuspendLayout();
 			toolStripContainer1.ContentPanel.SuspendLayout();
 			toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -57,7 +57,7 @@ namespace PicturePDF
 			// 
 			// toolStripContainer1.ContentPanel
 			// 
-			toolStripContainer1.ContentPanel.Controls.Add(pageView1);
+			toolStripContainer1.ContentPanel.Controls.Add(pageView);
 			resources.ApplyResources(toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
 			resources.ApplyResources(toolStripContainer1, "toolStripContainer1");
 			toolStripContainer1.Name = "toolStripContainer1";
@@ -123,10 +123,11 @@ namespace PicturePDF
 			// 
 			// pageView1
 			// 
-			resources.ApplyResources(pageView1, "pageView1");
-			pageView1.Model = null;
-			pageView1.Name = "pageView1";
-			pageView1.ZoomFactor = 1F;
+			resources.ApplyResources(pageView, "pageView1");
+			pageView.Model = null;
+			pageView.Name = "pageView1";
+			pageView.ZoomFactor = 1F;
+			pageView.ZoomFactorChanged += pageView_ZoomFactorChanged;
 			// 
 			// MainWindow
 			// 
@@ -135,8 +136,6 @@ namespace PicturePDF
 			Controls.Add(toolStripContainer1);
 			DoubleBuffered = true;
 			Name = "MainWindow";
-			Layout += UpdateAll;
-			Resize += UpdateAll;
 			toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
 			toolStripContainer1.BottomToolStripPanel.PerformLayout();
 			toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -163,7 +162,7 @@ namespace PicturePDF
 		private System.Windows.Forms.ToolStripStatusLabel FileLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.ToolStripDropDownButton zoomLabel;
-		private PageView pageView1;
+		private PageView pageView;
 	}
 }
 
