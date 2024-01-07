@@ -32,6 +32,7 @@ namespace PicturePDF
 			toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			statusStrip1 = new System.Windows.Forms.StatusStrip();
 			FileLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			paperSizeChooser = new System.Windows.Forms.ToolStripDropDownButton();
 			zoomLabel = new System.Windows.Forms.ToolStripDropDownButton();
 			pageView = new PageView();
 			toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -72,7 +73,7 @@ namespace PicturePDF
 			// 
 			resources.ApplyResources(statusStrip1, "statusStrip1");
 			statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { FileLabel, zoomLabel });
+			statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { FileLabel, paperSizeChooser, zoomLabel });
 			statusStrip1.Name = "statusStrip1";
 			// 
 			// FileLabel
@@ -80,6 +81,12 @@ namespace PicturePDF
 			FileLabel.Name = "FileLabel";
 			resources.ApplyResources(FileLabel, "FileLabel");
 			FileLabel.Spring = true;
+			// 
+			// paperSizeChooser
+			// 
+			paperSizeChooser.Name = "paperSizeChooser";
+			resources.ApplyResources(paperSizeChooser, "paperSizeChooser");
+			paperSizeChooser.DropDownItemClicked += paperSizeChooser_DropDownItemClicked;
 			// 
 			// zoomLabel
 			// 
@@ -180,6 +187,7 @@ namespace PicturePDF
 		private System.Windows.Forms.ToolStripButton openButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton addAdditionalImageButton;
+		private System.Windows.Forms.ToolStripDropDownButton paperSizeChooser;
 	}
 }
 

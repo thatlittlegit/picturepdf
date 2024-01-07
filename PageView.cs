@@ -46,9 +46,20 @@ namespace PicturePDF
 			get => pageModelStore;
 			set
 			{
-				if (pageModelStore != null) pageModelStore.ImageChanged -= model_ImageChanged;
+				if (pageModelStore != null)
+				{
+					pageModelStore.ImageChanged -= model_ImageChanged;
+					pageModelStore.PaperChanged -= model_PaperChanged;
+				}
+
 				pageModelStore = value;
-				if (pageModelStore != null) pageModelStore.ImageChanged += model_ImageChanged;
+
+				if (pageModelStore != null)
+				{
+					pageModelStore.ImageChanged += model_ImageChanged;
+					pageModelStore.PaperChanged += model_PaperChanged;
+				}
+
 				UpdateScrollInfo();
 				Invalidate();
 			}
@@ -56,6 +67,12 @@ namespace PicturePDF
 
 		private void model_ImageChanged(object sender, ImageModel args)
 		{
+			Invalidate();
+		}
+
+		private void model_PaperChanged(object sender, EventArgs args)
+		{
+			UpdateScrollInfo();
 			Invalidate();
 		}
 

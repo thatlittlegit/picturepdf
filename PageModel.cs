@@ -18,6 +18,7 @@ namespace PicturePDF
 		private readonly ISet<ImageModel> elements = new HashSet<ImageModel>();
 
 		public event EventHandler<ImageModel> ImageChanged;
+		public event EventHandler PaperChanged;
 
 		public PageModel(float width, float height)
 		{
@@ -56,6 +57,13 @@ namespace PicturePDF
 			}
 
 			return null;
+		}
+
+		public void Resize(float width, float height)
+		{
+			Width = width;
+			Height = height;
+			PaperChanged?.Invoke(this, new EventArgs());
 		}
 	}
 

@@ -27,6 +27,31 @@ namespace PicturePDF
 			}
 
 			zoomLabel.DropDownItems.AddRange(labels.ToArray());
+
+			void AddPaperSize(string resourceName, float width, float height)
+			{
+				string label = ExtraStrings.ResourceManager.GetString(resourceName) ?? resourceName;
+				paperSizeChooser.DropDownItems.Add(new PaperSizeLabel(label, width, height));
+		}
+
+			AddPaperSize("paperSize.Ledger", 21.59f, 35.64f);
+			AddPaperSize("paperSize.Tabloid", 21.59f, 35.64f);
+			AddPaperSize("paperSize.Legal", 21.59f, 35.64f);
+			AddPaperSize("paperSize.Letter", 21.59f, 27.94f);
+			paperSizeChooser.DropDownItems.Add(new ToolStripSeparator());
+			AddPaperSize("paperSize.A0", 84.10f, 118.9f);
+			AddPaperSize("paperSize.A1", 118.9f, 59.40f);
+			AddPaperSize("paperSize.A2", 42.00f, 59.40f);
+			AddPaperSize("paperSize.A3", 42.00f, 29.70f);
+			AddPaperSize("paperSize.A4", 21.00f, 29.70f);
+			AddPaperSize("paperSize.A5", 21.00f, 14.80f);
+			AddPaperSize("paperSize.A6", 10.50f, 14.80f);
+			paperSizeChooser.DropDownItems.Add(new ToolStripSeparator());
+
+			ToolStripButton custom = new ToolStripButton();
+			custom.Enabled = false;
+			custom.Text = ExtraStrings.ResourceManager.GetString("paperSize.Custom") ?? "paperSize.Custom";
+			paperSizeChooser.DropDownItems.Add(custom);
 		}
 
 		private void addAdditionalImageButton_Click(object sender, EventArgs e)
@@ -122,7 +147,10 @@ namespace PicturePDF
 
 		private void ResetPage()
 		{
+			if (page != null) page.PaperChanged -= page_PaperChanged;
 			page = new PageModel(8.5f * 2.54f, 11f * 2.54f);
+			page.PaperChanged += page_PaperChanged;
+			page_PaperChanged(page, new EventArgs());
 			pageView.Model = page;
 
 			addAdditionalImageButton.Enabled = true;
@@ -225,7 +253,31 @@ namespace PicturePDF
 
 		private void pageView_SelectionChanged(object sender, ImageModel e)
 		{
-			FileLabel.Text = e.Label;
+			FileLabel.Text = e?.Label ?? "";
+		}
+
+		private void paperSizeChooser_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+			var selected = (PaperSizeLabel)e.ClickedItem;
+
+			page.Resize(selected.PaperWidth, selected.PaperHeight);
+		}
+
+		private void page_PaperChanged(object sender, EventArgs e)
+		{
+			paperSizeChooser.Text = page.Width.ToString("N2") + "cm × " + page.Height.ToString("N2") + "cm";
+		}
+	}
+
+	internal class PaperSizeLabel : ToolStripLabel
+	{
+		public readonly float PaperWidth;
+		public readonly float PaperHeight;
+
+		public PaperSizeLabel(string label, float width, float height) : base(label)
+		{
+			PaperWidth = width;
+			PaperHeight = height;
 		}
 	}
 }
