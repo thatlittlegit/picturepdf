@@ -250,7 +250,7 @@ namespace PicturePDF
 			foreach (var name in Directory.EnumerateFiles(Path.GetDirectoryName(currentPath)))
 			{
 				string ext = Path.GetExtension(name);
-				if (ext == ".pdf" || ext == ".png" || ext == ".jpg" || ext == ".bmp")
+				if (ext == ".png" || ext == ".jpeg" || ext == ".jpg" || ext == ".bmp")
 				{
 					yield return name;
 				}

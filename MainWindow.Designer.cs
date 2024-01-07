@@ -151,6 +151,10 @@ namespace PicturePDF
 			addAdditionalImageButton.Name = "addAdditionalImageButton";
 			addAdditionalImageButton.Click += addAdditionalImageButton_Click;
 			// 
+			// openFileDialog
+			// 
+			resources.ApplyResources(openFileDialog, "openFileDialog");
+			// 
 			// MainWindow
 			// 
 			resources.ApplyResources(this, "$this");
