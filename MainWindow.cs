@@ -273,6 +273,11 @@ namespace PicturePDF
 		{
 			paperSizeChooser.Text = page.Width.ToString("N2") + "cm × " + page.Height.ToString("N2") + "cm";
 		}
+
+		private void toolStripButton1_Click(object sender, EventArgs e)
+		{
+			new About().ShowDialog(this);
+		}
 	}
 
 	internal class PaperSizeLabel : ToolStripLabel

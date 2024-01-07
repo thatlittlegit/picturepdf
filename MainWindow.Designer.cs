@@ -43,6 +43,8 @@ namespace PicturePDF
 			toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			addAdditionalImageButton = new System.Windows.Forms.ToolStripButton();
 			openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			toolStripContainer1.BottomToolStripPanel.SuspendLayout();
 			toolStripContainer1.ContentPanel.SuspendLayout();
 			toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -108,7 +110,7 @@ namespace PicturePDF
 			// 
 			resources.ApplyResources(toolStrip1, "toolStrip1");
 			toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { previousFileButton, openButton, nextFileButton, pdfGeneratingButton, toolStripSeparator1, addAdditionalImageButton });
+			toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { previousFileButton, openButton, nextFileButton, pdfGeneratingButton, toolStripSeparator1, addAdditionalImageButton, toolStripSeparator2, toolStripButton1 });
 			toolStrip1.Name = "toolStrip1";
 			toolStrip1.Stretch = true;
 			// 
@@ -155,6 +157,17 @@ namespace PicturePDF
 			// 
 			resources.ApplyResources(openFileDialog, "openFileDialog");
 			// 
+			// toolStripSeparator2
+			// 
+			toolStripSeparator2.Name = "toolStripSeparator2";
+			resources.ApplyResources(toolStripSeparator2, "toolStripSeparator2");
+			// 
+			// toolStripButton1
+			// 
+			resources.ApplyResources(toolStripButton1, "toolStripButton1");
+			toolStripButton1.Name = "toolStripButton1";
+			toolStripButton1.Click += toolStripButton1_Click;
+			// 
 			// MainWindow
 			// 
 			resources.ApplyResources(this, "$this");
@@ -192,6 +205,8 @@ namespace PicturePDF
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton addAdditionalImageButton;
 		private System.Windows.Forms.ToolStripDropDownButton paperSizeChooser;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
 	}
 }
 
