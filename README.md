@@ -20,9 +20,8 @@ dotnet build
 
 ## License
 PicturePDF is licensed underneath the [GNU General Public License], version 3.
-The icons `arrow_left.png`, `arrow_right.png`, `folder.png` and the
-`page_white_acrobat` files are from the [Silk] collection by Mark James
-(mjames at gmail dot com).
+The icons `arrow_left.png`, `rainbow.png`, `arrow_right.png`, `folder.png` and
+the `page_white_acrobat` files are from the [Silk] collection by Mark James.
 
 [WinForms]: https://docs.microsoft.com/en-us/dotnet/framework/winforms/
 [St. Lawrence Market]: https://commons.wikimedia.org/wiki/File:St._Lawrence_Market,_Toronto.png
