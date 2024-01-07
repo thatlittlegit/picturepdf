@@ -82,8 +82,8 @@ namespace PicturePDF
 			float width = Model.Width * PIXELS_PER_CENTIMETRE * ZoomFactor;
 			float height = Model.Height * PIXELS_PER_CENTIMETRE * ZoomFactor;
 
-			width += 1;
-			height += 1;
+			width += 2;
+			height += 2;
 
 			AutoScrollMinSize = new Size((int)width, (int)height);
 		}
