@@ -32,7 +32,7 @@ namespace PicturePDF
 			{
 				string label = ExtraStrings.ResourceManager.GetString(resourceName) ?? resourceName;
 				paperSizeChooser.DropDownItems.Add(new PaperSizeLabel(label, width, height));
-		}
+			}
 
 			AddPaperSize("paperSize.Ledger", 21.59f, 35.64f);
 			AddPaperSize("paperSize.Tabloid", 21.59f, 35.64f);
@@ -59,7 +59,10 @@ namespace PicturePDF
 			var (stream, name) = OpenFileDialog();
 			if (stream != null)
 			{
-				AddImage(stream, name);
+				using (stream)
+				{
+					AddImage(stream, name);
+				}
 			}
 		}
 
@@ -71,7 +74,10 @@ namespace PicturePDF
 				return;
 			}
 
-			OpenPrimaryFile(stream, name);
+			using (stream)
+			{
+				OpenPrimaryFile(stream, name);
+			}
 		}
 
 		private (Stream, string) OpenFileDialog()
@@ -169,7 +175,7 @@ namespace PicturePDF
 				Title = "Save PDF to...",
 			};
 			dialog.ShowDialog(this);
-			Stream output = dialog.OpenFile();
+			using Stream output = dialog.OpenFile();
 
 			if (output == null)
 			{
